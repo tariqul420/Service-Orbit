@@ -1,10 +1,24 @@
 import { useForm } from "react-hook-form";
 import { MdError } from "react-icons/md";
 import useAuth from "../Hook/useAuth";
+import { useMutation } from "@tanstack/react-query";
+import useAxiosSecure from "../Hook/useAxiosSecure";
+import toast from "react-hot-toast";
 
 const AddService = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
     const { user } = useAuth()
+    const axiosSecure = useAxiosSecure()
+
+    const { isPending, mutateAsync } = useMutation({
+        mutationFn: async (serviceData) => {
+            await axiosSecure.post('/add-service', serviceData)
+        },
+        onSuccess: () => {
+            toast.success('Data Added Successfully!!!')
+            // QueryClient.invalidateQueries({ queryKey: ['services'] })
+        }
+    })
 
     const onSubmit = async (data) => {
         const { serviceImage, serviceName, serviceArea, servicePrice, serviceDescription } = data;
@@ -20,6 +34,12 @@ const AddService = () => {
                 email: user.email,
                 photoURL: user.photoURL
             }
+        }
+
+        try {
+            await mutateAsync(serviceData)
+        } catch (error) {
+            toast.error(error.message)
         }
     }
 
@@ -92,7 +112,7 @@ const AddService = () => {
                         <button
                             type="submit"
                             className="inputButton">
-                            Add Service
+                            {isPending ? 'Adding...' : 'Add Service'}
                         </button>
                     </div>
                 </form>
