@@ -1,11 +1,26 @@
 import { useForm } from "react-hook-form";
 import { MdError } from "react-icons/md";
+import useAuth from "../Hook/useAuth";
 
 const AddService = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
+    const { user } = useAuth()
 
     const onSubmit = async (data) => {
-        console.log(data);
+        const { serviceImage, serviceName, serviceArea, servicePrice, serviceDescription } = data;
+
+        const serviceData = {
+            serviceImage,
+            serviceName,
+            serviceArea,
+            servicePrice,
+            serviceDescription,
+            ServiceProvider: {
+                name: user.displayName,
+                email: user.email,
+                photoURL: user.photoURL
+            }
+        }
     }
 
     return (

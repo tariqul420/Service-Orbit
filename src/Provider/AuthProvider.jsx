@@ -2,6 +2,7 @@ import { createUserWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEm
 import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase/Firebase.init";
 import PropTypes from "prop-types";
+import axios from "axios";
 // import axios from "axios";
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -44,11 +45,19 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            if (currentUser) {
-                setUser(currentUser)
-                setLoading(false)
+            if (currentUser?.email) {
+                const user = { email: currentUser?.email }
+                axios.post(`${import.meta.env.VITE_API_URL}/jwt`, user, { withCredentials: true })
+                    .then(() => {
+                        setUser(currentUser)
+                        setLoading(false)
+                    })
             } else {
-                setUser(null)
+                axios.post(`${import.meta.env.VITE_API_URL}/logout`, {}, { withCredentials: true })
+                    .then(() => {
+                        setUser(null)
+                        setLoading(false)
+                    })
             }
         })
 
