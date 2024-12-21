@@ -14,32 +14,39 @@ const Navbar = () => {
         <nav className="flex items-center justify-between relative boxShadow rounded-full px-[10px] w-11/12 mx-auto py-6">
             <div>
                 <Link to='/'>
-                    <h2 className="font-bold text-4xl font-Montserrat">ServiceOrbit</h2>
+                    <h2 className="font-bold text-4xl font-Montserrat max-sm:hidden">ServiceOrbit</h2>
+                    <h2 className="font-bold text-4xl font-Montserrat sm:hidden">S.Orbit</h2>
                 </Link>
-            </div>
-            <div>
-                <ul className="items-center gap-[20px] text-[1rem] font-semibold lg:flex hidden">
-                    <li className="navBarLink">
-                        <NavLink to='/'>
-                            Home
-                        </NavLink>
-                    </li>
-                    <li className="navBarLink">
-                        <NavLink to='/all-movies'>
-                            All Movies
-                        </NavLink>
-                    </li>
-                </ul>
             </div>
 
             <div className="items-center gap-[15px] flex">
+                <div className="border-r-2 pr-4 max-sm:hidden">
+                    <ul className="items-center gap-[20px] text-[1rem] font-semibold lg:flex hidden">
+                        <li className="navBarLink">
+                            <NavLink to='/'>
+                                Home
+                            </NavLink>
+                        </li>
+                        <li className="navBarLink">
+                            <NavLink to='/services'>
+                                Services
+                            </NavLink>
+                        </li>
+                        <li className="navBarLink">
+                            <NavLink to='/dashboard'>
+                                Dashboard
+                            </NavLink>
+                        </li>
+                    </ul>
+                </div>
+
                 <ThemeToggle />
 
                 {
                     user ? <Profile /> : <AuthBtn />
                 }
 
-                <CiMenuFries className="text-[1.8rem] mr-1 text-black cursor-pointer lg:hidden flex"
+                <CiMenuFries className="text-[1.8rem] mr-1 cursor-pointer lg:hidden flex"
                     onClick={() => setMobileSidebarOpen(!mobileSidebarOpen)} />
             </div>
 
@@ -54,8 +61,13 @@ const Navbar = () => {
                         </NavLink>
                     </li>
                     <li className="navBarLink">
-                        <NavLink to='/all-movies'>
-                            All Movies
+                        <NavLink to='/services'>
+                            Services
+                        </NavLink>
+                    </li>
+                    <li className="navBarLink">
+                        <NavLink to='/dashboard'>
+                            Dashboard
                         </NavLink>
                     </li>
                 </ul>

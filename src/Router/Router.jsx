@@ -6,6 +6,8 @@ import Login from "../Pages/Authentication/Login";
 import ForgotPassword from "../Pages/Authentication/ForgotPassword";
 import Error404 from "../Components/Common/Error404";
 import UpdateProfile from "../Pages/Authentication/UpdateProfile";
+import Services from "../Pages/Services";
+import Dashboard from "../Pages/Dashboard";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
             {
                 path: '/update-profile',
                 element: <UpdateProfile />
+            },
+            {
+                path: '/services',
+                element: <Services />
+            },
+            {
+                path: '/dashboard',
+                element: <Dashboard />
             }
         ]
     }
