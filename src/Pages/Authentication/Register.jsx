@@ -44,6 +44,14 @@ const Register = () => {
 
     }
 
+    const handelGoogle = () => {
+        socialAuth(googleProvider)
+            .then(() => {
+                navigate('/')
+                toast.success('Register Successfully.')
+            })
+    }
+
     return (
         <>
             <section className="w-11/12 md:w-10/12 mx-auto h-auto flex flex-col-reverse lg:flex-row my-0 lg:my-12">
@@ -176,7 +184,7 @@ const Register = () => {
                     </div>
 
                     <button
-                        onClick={() => socialAuth(googleProvider)}
+                        onClick={handelGoogle}
                         className="flex items-center justify-center py-2 px-4 gap-4 border border-gray-300 rounded-lg w-full text-[1rem] font-medium"
                     >
                         <FcGoogle className="text-[2rem]" />

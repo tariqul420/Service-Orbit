@@ -20,8 +20,7 @@ const Login = () => {
     const googleProvider = new GoogleAuthProvider();
 
     const onSubmit = (data) => {
-        const { email, password } = data
-
+        const { email, password } = data;
         loginUser(email, password)
             .then(() => {
                 setEmail('')
@@ -32,6 +31,14 @@ const Login = () => {
                 if (error.code === "auth/invalid-credential") {
                     toast.error('Invalid Email or Password')
                 }
+            })
+    }
+
+    const handelGoogle = () => {
+        socialAuth(googleProvider)
+            .then(() => {
+                navigate(location?.state ? location?.state : '/')
+                toast.success('Login Successfully.')
             })
     }
 
@@ -123,7 +130,7 @@ const Login = () => {
                     </div>
 
                     <button
-                        onClick={() => { socialAuth(googleProvider), navigate('/') }}
+                        onClick={handelGoogle}
                         className="flex items-center justify-center py-2 px-4 gap-4 border border-gray-300 rounded-lg w-full text-[1rem] font-medium"
                     >
                         <FcGoogle className="text-[2rem]" />
