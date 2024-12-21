@@ -11,7 +11,6 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const [email, setEmail] = useState("")
-    console.log('Current User ==>', user);
 
     const socialAuth = (provider) => {
         setLoading(true)
@@ -83,7 +82,7 @@ const AuthProvider = ({ children }) => {
 };
 
 AuthProvider.propTypes = {
-    children: PropTypes.object.isRequired
+    children: PropTypes.array.isRequired
 }
 
 export default AuthProvider;
