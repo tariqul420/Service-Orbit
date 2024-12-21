@@ -11,6 +11,8 @@ import AddService from "../Pages/AddService";
 import ManageService from "../Pages/ManageService";
 import BookedServices from "../Pages/BookedServices";
 import PrivateRouter from "./PrivateRouter";
+import ServiceToDo from "../Pages/ServiceToDo";
+import ServiceDetails from "../Pages/ServiceDetails";
 
 const router = createBrowserRouter([
     {
@@ -51,16 +53,32 @@ const router = createBrowserRouter([
             },
             {
                 path: '/manage-service',
-                element: <ManageService />
+                element:
+                    <PrivateRouter>
+                        <ManageService />
+                    </PrivateRouter>
             },
             {
                 path: '/booked-service',
-                element: <BookedServices />
+                element:
+                    <PrivateRouter>
+                        <BookedServices />
+                    </PrivateRouter>
             },
             {
                 path: '/service-to-do',
-                element: <BookedServices />
+                element:
+                    <PrivateRouter>
+                        <ServiceToDo />
+                    </PrivateRouter>
             },
+            {
+                path: 'services/:id',
+                element:
+                    <PrivateRouter>
+                        <ServiceDetails />
+                    </PrivateRouter>
+            }
         ]
     }
 ])
