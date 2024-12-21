@@ -5,10 +5,15 @@ import AuthBtn from "./AuthBtn";
 import useAuth from "../../../Hook/useAuth";
 import Profile from "./Profile";
 import ThemeToggle from "./ThemeToggle";
+import { IoIosArrowUp } from "react-icons/io";
+import { FaBookmark } from "react-icons/fa";
+import { MdManageAccounts, MdMedicalServices } from "react-icons/md";
+import { RiUserAddFill } from "react-icons/ri";
 
 const Navbar = () => {
     const { user } = useAuth();
     const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+    const [dashboardOpen, setDashboardOpen] = useState(false);
 
     return (
         <nav className="flex items-center justify-between relative boxShadow rounded-full px-[10px] w-11/12 mx-auto py-6">
@@ -33,9 +38,41 @@ const Navbar = () => {
                             </NavLink>
                         </li>
                         <li className="navBarLink">
-                            <NavLink to='/dashboard'>
-                                Dashboard
-                            </NavLink>
+                            <div className="flex items-center gap-[10px] cursor-pointer relative"
+                                onClick={() => setDashboardOpen(!dashboardOpen)}
+                            >
+
+                                <div className="relative">
+                                    <p>Dashboard</p>
+                                </div>
+
+                                <div
+                                    className={`${dashboardOpen ? "translate-y-0 opacity-100 z-[1]" : "translate-y-[10px] opacity-0 z-[-1]"} bg-white w-max rounded-md boxShadow absolute top-[45px] right-0 p-[10px] flex flex-col transition-all duration-300 gap-[5px] dark:bg-gray-700/30`}>
+                                    <p
+                                        className="flex items-center gap-[5px] rounded-md p-[8px] pr-[45px] py-[3px] text-[1rem] hover:bg-gray-50 dark:hover:bg-gray-600/30">
+                                        <RiUserAddFill />
+                                        Add Service
+                                    </p>
+                                    <p
+                                        className="flex items-center gap-[5px] rounded-md p-[8px] pr-[45px] py-[3px] text-[1rem] hover:bg-gray-50 dark:hover:bg-gray-600/30">
+                                        <MdManageAccounts />
+                                        Manage Service
+                                    </p>
+                                    <p
+                                        className="flex items-center gap-[5px] rounded-md p-[8px] pr-[45px] py-[3px] text-[1rem] hover:bg-gray-50 dark:hover:bg-gray-600/30">
+                                        <FaBookmark />
+                                        Booked-Services
+                                    </p>
+                                    <p
+                                        className="flex items-center gap-[5px] rounded-md p-[8px] pr-[45px] py-[3px] text-[1rem] hover:bg-gray-50 dark:hover:bg-gray-600/30">
+                                        <MdMedicalServices />
+                                        Service-To-Do
+                                    </p>
+                                </div>
+
+                                <IoIosArrowUp
+                                    className={`${dashboardOpen ? "rotate-0" : "rotate-[180deg]"} transition-all duration-300 sm:block hidden`} />
+                            </div>
                         </li>
                     </ul>
                 </div>
