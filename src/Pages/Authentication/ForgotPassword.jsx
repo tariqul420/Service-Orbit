@@ -41,12 +41,12 @@ const ForgotPassword = () => {
                         name="email"
                         value={email ? email : ''}
                         placeholder="Email"
-                        className="py-3 px-4 border focus:outline-color-primary2 border-gray-300 dark:bg-color-primary-d rounded-lg w-full"
+                        className="inputField"
                     />
 
                     <button
                         type="submit"
-                        className="w-full py-3 px-4 border border-solid border-[#3B82F6] font-bold transition-all duration-300 bg-[#3B82F6] outline-none text-white rounded-lg mt-3">
+                        className="inputButton">
                         Reset Password
                     </button>
                 </form>

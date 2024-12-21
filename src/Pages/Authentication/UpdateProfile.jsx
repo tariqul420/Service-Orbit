@@ -34,7 +34,7 @@ const UpdateProfile = () => {
 
                     <div>
                         <input
-                            className="py-3 px-4 border focus:outline-color-primary border-gray-300  rounded-lg w-full"
+                            className="inputField"
                             placeholder="Full Name"
                             {...register("fullName", { required: 'Name is required', minLength: { value: 5, message: 'Name must be at least 5 characters long.' } })} />
                         {errors.fullName && <p className="flex text-red-500 gap-1 items-center"><MdError /> {errors.fullName.message} </p>}
@@ -42,7 +42,7 @@ const UpdateProfile = () => {
 
                     <div>
                         <input
-                            className="py-3 px-4 border focus:outline-color-primary border-gray-300  rounded-lg w-full"
+                            className="inputField"
                             placeholder="Photo Url"
                             {...register("photoUrl", { required: 'Photo Url is required.', pattern: { value: new RegExp('^https?:\\/\\/.+\\.(png|jpg|jpeg|bmp|gif|webp)$', 'i'), message: 'Invalid URL (png, jpg, jpeg, bmp, gif, webp).' } })} />
                         {errors.photoUrl && <p className="flex text-red-500 gap-1 items-center"><MdError /> {errors.photoUrl.message} </p>}
@@ -51,7 +51,7 @@ const UpdateProfile = () => {
                     <div className="w-full flex items-center justify-center">
                         <button
                             type="submit"
-                            className="w-full py-3 px-4 bg-[#3B82F6] text-white border-none font-bold outline-none rounded-lg mt-3"
+                            className="inputButton"
                         >
                             Update Profile
                         </button>

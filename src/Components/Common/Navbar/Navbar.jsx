@@ -4,16 +4,17 @@ import { CiMenuFries } from "react-icons/ci";
 import AuthBtn from "./AuthBtn";
 import useAuth from "../../../Hook/useAuth";
 import Profile from "./Profile";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
     const { user } = useAuth();
     const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
     return (
-        <nav className="flex items-center justify-between relative boxShadow rounded-full px-[10px] py-[8px] wfu w-11/12 mx-auto my-6">
+        <nav className="flex items-center justify-between relative boxShadow rounded-full px-[10px] w-11/12 mx-auto py-6">
             <div>
                 <Link to='/'>
-                    <h2 className="font-bold text-4xl font-Montserrat">Film Fusion</h2>
+                    <h2 className="font-bold text-4xl font-Montserrat">ServiceOrbit</h2>
                 </Link>
             </div>
             <div>
@@ -32,6 +33,7 @@ const Navbar = () => {
             </div>
 
             <div className="items-center gap-[15px] flex">
+                <ThemeToggle />
 
                 {
                     user ? <Profile /> : <AuthBtn />

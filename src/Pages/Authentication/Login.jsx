@@ -52,7 +52,7 @@ const Login = () => {
                                 type="email"
                                 name="email"
                                 placeholder="Email"
-                                className="py-3 font-medium px-4 border focus:outline-[#3B82F6] border-gray-300 rounded-lg w-full"
+                                className="inputField"
                                 {...register("email", { required: 'Email is required', onChange: (e) => setEmail(e.target.value) })}
                             />
                             {errors.email && <p className="flex text-red-500 gap-1 items-center"><MdError /> {errors.email.message} </p>}
@@ -64,7 +64,7 @@ const Login = () => {
                                 type={isEyeOpen ? "text" : "password"}
                                 name="password"
                                 placeholder="Password"
-                                className="py-3 font-medium px-4 border focus:outline-[#3B82F6] border-gray-300 rounded-lg w-full"
+                                className="inputField"
                                 {...register("password", {
                                     required: 'Password is required'
                                 })}
@@ -99,7 +99,7 @@ const Login = () => {
                         <div className="w-full flex items-center justify-center">
                             <button
                                 type="submit"
-                                className="w-full py-3 px-4 bg-[#3B82F6] text-white border-none font-bold outline-none rounded-lg mt-3"
+                                className="inputButton"
                             >
                                 Login
                             </button>
