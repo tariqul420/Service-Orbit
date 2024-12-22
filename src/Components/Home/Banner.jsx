@@ -8,14 +8,13 @@ import axios from "axios";
 import LoadingSpinner from "../Common/LoadingSpinner";
 
 const Banner = () => {
-    const {
-        data: banner, isLoading, } = useQuery({
-            queryKey: ['jobs'],
-            queryFn: async () => {
-                const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/banner`)
-                return data
-            },
-        })
+    const { data: banner, isLoading } = useQuery({
+        queryKey: ['banner'],
+        queryFn: async () => {
+            const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/banner`)
+            return data
+        },
+    })
 
     if (isLoading) return <LoadingSpinner />
 
@@ -60,7 +59,7 @@ const Banner = () => {
                             {/*  text  */}
                             <div
                                 className="absolute top-[55%] transform group-hover:translate-y-[-50%] transition-all duration-500 w-full h-full left-0 z-20 right-0 flex items-center justify-center flex-col">
-                                <button className="px-3 py-2 rounded-full bg-color-accent dark:bg-color-accent-d font-medium">
+                                <button className="px-3 py-2 rounded-full bg-color-accent dark:bg-color-accent-d font-medium text-white">
                                     View Details
                                 </button>
                             </div>

@@ -34,7 +34,7 @@ const AddService = () => {
             serviceArea,
             servicePrice,
             serviceDescription,
-            ServiceProvider: {
+            serviceProvider: {
                 name: user.displayName,
                 email: user.email,
                 photoURL: user.photoURL
