@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import { TiLocation } from "react-icons/ti";
+import { Link } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
-    const { serviceImage, serviceName, serviceArea, servicePrice, serviceDescription, serviceProvider } = service
+    const { _id, serviceImage, serviceName, serviceArea, servicePrice, serviceDescription, serviceProvider } = service
     return (
         <div className="p-3 rounded-2xl border border-solid border-color-accent dark:border-color-accent-d flex gap-4 bg-white dark:bg-gray-700 shadow-lg">
             <div className="w-[45%]">
@@ -38,11 +39,11 @@ const ServiceCard = ({ service }) => {
                     </div>
                 </div>
 
-                <div>
+                <Link to={`/service/${_id}`}>
                     <button className="border-2  px-6 py-2 rounded-full border-solid border-color-accent dark:border-color-accent-d font-semibold text-lg text-color-primary bg-color-accent dark:bg-color-accent-d mt-6">
                         View Details
                     </button>
-                </div>
+                </Link>
             </div>
         </div>
     );

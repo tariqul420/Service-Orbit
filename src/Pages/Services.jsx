@@ -1,4 +1,3 @@
-// import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { IoSearch } from "react-icons/io5";
