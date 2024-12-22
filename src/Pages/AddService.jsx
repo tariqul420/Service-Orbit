@@ -66,7 +66,7 @@ const AddService = () => {
                             type="text"
                             placeholder="Services Image"
                             className="inputField w-full"
-                            {...register("serviceImage", { required: 'Photo Url is required.', pattern: { value: new RegExp('^https?:\\/\\/.+\\.(png|jpg|jpeg|bmp|gif|webp)$', 'i'), message: 'Invalid URL (png, jpg, jpeg, bmp, gif, webp).' } })}
+                            {...register("serviceImage", { required: 'Photo Url is required.' })}
                         />
                         {errors.serviceImage && <p className="flex text-red-500 gap-1 items-center"><MdError /> {errors.serviceImage.message} </p>}
                     </div>

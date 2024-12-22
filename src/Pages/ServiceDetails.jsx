@@ -39,7 +39,7 @@ const ServiceDetails = () => {
                             className="flex items-center justify-between w-full">
                             <div className="flex items-center gap-[5px]">
                                 <FaLocationCrosshairs className="text-[1.1rem]" />
-                                <p className="text-[1rem] font-semibold">{serviceArea}</p>
+                                <p className="text-[1rem] font-semibold capitalize">{serviceArea}</p>
                             </div>
 
                             <div className="flex items-center gap-[5px] text-color-accent dark:text-color-accent-d">

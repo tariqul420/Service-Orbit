@@ -39,6 +39,7 @@ const BookModal = ({ modalOpen, setModalOpen, serviceDetails }) => {
                 email: user.email,
                 photoURL: user.photoURL
             },
+            serviceStatus: 'pending',
             specialInstruction: data?.specialInstruction,
             serviceTakingDate: data?.serviceTakingDate,
         }

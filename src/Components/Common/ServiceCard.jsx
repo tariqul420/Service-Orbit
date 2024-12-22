@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const ServiceCard = ({ service }) => {
     const { _id, serviceImage, serviceName, serviceArea, servicePrice, serviceDescription, serviceProvider } = service
     return (
-        <div className="p-3 rounded-2xl border border-solid border-color-accent dark:border-color-accent-d flex gap-4 bg-white dark:bg-gray-700 shadow-lg">
+        <div className="p-3 rounded-2xl border border-solid border-color-accent dark:border-color-accent-d flex gap-4 bg-white dark:bg-gray-700 shadow-lg max-h-[345px]">
             <div className="w-[45%]">
                 <img className="rounded-lg h-full w-full object-cover" src={serviceImage} alt="" />
             </div>
@@ -16,7 +16,7 @@ const ServiceCard = ({ service }) => {
                     <p className="font-bold text-color-accent dark:text-color-accent-d">${servicePrice}</p>
                 </div>
 
-                <p className="mt-1 flex gap-1 items-center">
+                <p className="mt-1 flex gap-1 items-center capitalize">
                     <TiLocation />
                     <span>{serviceArea}</span>
                 </p>
