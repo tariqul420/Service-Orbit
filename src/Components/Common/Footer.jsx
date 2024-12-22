@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="pt-4 w-full bg-gray-100 dark:bg-gray-700/30">
             <div className="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10 mb-8">
                 <div className="space-y-4">
-                    <h2 className="font-extrabold text-2xl">Film Fusion</h2>
+                    <h2 className="font-extrabold text-2xl">Service Orbit</h2>
                     <p className="font-medium text-xl">Subscribe</p>
                     <div>
                         <p className="font-medium mb-2">Get 10% off your order</p>
@@ -35,8 +35,8 @@ const Footer = () => {
                     <h2 className="font-semibold text-2xl">Support</h2>
                     <p>My account</p>
                     <p>Login/Register</p>
-                    <p>All movies</p>
-                    <p>Add Movies</p>
+                    <p>Services</p>
+                    <p>Dashboard</p>
                 </div>
                 <div className="space-y-4">
                     <h2 className="font-semibold text-2xl">Quick Link</h2>
