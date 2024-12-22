@@ -1,9 +1,14 @@
 import Lottie from 'lottie-react';
-import spaceError from '../../assets/Lottie/space_404.json';
+import spaceError from '../assets/Lottie/space_404.json';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Error404 = () => {
     const navigate = useNavigate()
+
+    useEffect(() => {
+        document.title = 'Error404 || Service Orbit'
+    }, []);
 
     return (
         <div className='w-full md:w-11/12  mx-auto max-h-screen flex flex-col-reverse lg:flex-row items-center justify-center'>

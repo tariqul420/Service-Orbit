@@ -1,4 +1,11 @@
+import { useEffect } from "react";
+
 const ServiceDetails = () => {
+
+    useEffect(() => {
+        document.title = 'Service Details || Service Orbit'
+    }, []);
+
     return (
         <div>
 

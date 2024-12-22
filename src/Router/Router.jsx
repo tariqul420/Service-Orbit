@@ -4,7 +4,7 @@ import Home from "../Pages/Home";
 import Register from "../Pages/Authentication/Register";
 import Login from "../Pages/Authentication/Login";
 import ForgotPassword from "../Pages/Authentication/ForgotPassword";
-import Error404 from "../Components/Common/Error404";
+import Error404 from "../Pages/Error404";
 import UpdateProfile from "../Pages/Authentication/UpdateProfile";
 import Services from "../Pages/Services";
 import AddService from "../Pages/AddService";
