@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { TiLocation } from "react-icons/ti";
 
 const ServiceCard = ({ service }) => {
-    const { serviceImage, serviceName, serviceArea, servicePrice, serviceDescription, ServiceProvider } = service
+    const { serviceImage, serviceName, serviceArea, servicePrice, serviceDescription, serviceProvider } = service
     return (
         <div className="p-3 rounded-2xl border border-solid border-color-accent dark:border-color-accent-d flex gap-4 bg-white dark:bg-gray-700 shadow-lg">
             <div className="w-[45%]">
@@ -28,13 +28,13 @@ const ServiceCard = ({ service }) => {
                 <div className="flex items-center justify-between mt-1">
                     <div>
                         <img
-                            src={ServiceProvider?.photoURL}
-                            alt={ServiceProvider?.name}
+                            src={serviceProvider?.photoURL}
+                            alt={serviceProvider?.name}
                             className="rounded-full h-[40px] w-[40px] border-2 border-solid border-color-accent dark:border-color-accent-d"
                         />
                     </div>
                     <div>
-                        <h3 className="font-medium uppercase">{ServiceProvider?.name}</h3>
+                        <h3 className="font-medium uppercase">{serviceProvider?.name}</h3>
                     </div>
                 </div>
 

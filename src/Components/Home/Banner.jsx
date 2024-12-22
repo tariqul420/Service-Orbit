@@ -19,7 +19,7 @@ const Banner = () => {
     if (isLoading) return <LoadingSpinner />
 
     return (
-        <div className="swiper mySwiper w-11/12 mx-auto mb-20">
+        <div className="swiper mySwiper w-11/12 mx-auto mb-28">
             <Swiper
                 modules={[Autoplay, Pagination]}
                 loop={true}

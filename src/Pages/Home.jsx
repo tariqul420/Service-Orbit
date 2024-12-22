@@ -26,7 +26,7 @@ const Home = () => {
         <section>
             <Banner />
 
-            <div className="mb-20">
+            <div className="mb-28">
                 <h2 className="text-6xl font-bold text-center">Popular Services</h2>
 
                 {
@@ -49,7 +49,7 @@ const Home = () => {
                 }
 
                 <Link to='/services'>
-                    <button className="border-2 px-5 py-2 rounded-full border-solid border-color-accent dark:border-color-accent-d font-semibold text-lg text-color-primary bg-color-accent dark:bg-color-accent-d mt-12 block mx-auto">
+                    <button className="border-2 px-10 py-2 rounded-full border-solid border-color-accent dark:border-color-accent-d font-semibold text-lg text-color-primary bg-color-accent dark:bg-color-accent-d mt-12 block mx-auto">
                         Show all
                     </button>
                 </Link>
