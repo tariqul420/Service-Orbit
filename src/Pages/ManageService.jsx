@@ -86,7 +86,7 @@ const ManageService = () => {
                 </span>
             </div>
 
-            <div className='flex flex-col my-8'>
+            <div className='flex flex-col my-4 mb-8'>
                 <div className='-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8'>
                     <div className='inline-block min-w-full py-2 align-middle md:px-6 lg:px-8'>
                         <div className='overflow-hidden border border-gray-200 dark:border-gray-600  md:rounded-lg'>
@@ -167,7 +167,7 @@ const ManageService = () => {
                                                     </button>
 
                                                     <Link
-                                                        to={`/update/1`}
+                                                        to={`/update-service/${service?._id}`}
                                                         className=' transition-colors duration-200   hover:text-yellow-500 focus:outline-none'
                                                     >
                                                         <BiSolidEdit size={20} />
