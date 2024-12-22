@@ -52,18 +52,14 @@ const ServiceDetails = () => {
                         <p className="mt-4">{serviceDescription}</p>
 
                         <h3 className="text-2xl font-semibold mt-3">Service Provider:</h3>
-                        <div className="flex items-center justify-between mt-2">
-                            <div>
-                                <img
-                                    src={serviceProvider?.photoURL}
-                                    alt={serviceProvider?.name}
-                                    className="rounded-full h-[50px] w-[50px] border-2 border-solid border-color-accent dark:border-color-accent-d"
-                                />
-                            </div>
+                        <div className="flex items-center gap-4 mt-2">
+                            <img
+                                src={serviceProvider?.photoURL}
+                                alt={serviceProvider?.name}
+                                className="rounded-full h-[50px] w-[50px] border-2 border-solid border-color-accent dark:border-color-accent-d"
+                            />
                             <div>
                                 <h3 className="font-medium">{serviceProvider?.email}</h3>
-                            </div>
-                            <div>
                                 <h3 className="font-medium uppercase">{serviceProvider?.name}</h3>
                             </div>
                         </div>
