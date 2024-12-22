@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import { useEffect } from "react";
 
 const AddService = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm()
+    const { register, handleSubmit, reset, formState: { errors } } = useForm()
     const { user } = useAuth()
     const axiosSecure = useAxiosSecure()
 
@@ -21,7 +21,6 @@ const AddService = () => {
         },
         onSuccess: () => {
             toast.success('Data Added Successfully!!!')
-            // QueryClient.invalidateQueries({ queryKey: ['services'] })
         }
     })
 
@@ -43,6 +42,7 @@ const AddService = () => {
 
         try {
             await mutateAsync(serviceData)
+            reset()
         } catch (error) {
             toast.error(error.message)
         }

@@ -26,15 +26,14 @@ const ServiceCard = ({ service }) => {
                 </p>
 
                 <h3 className="text-2xl font-semibold mt-3">Service Provider:</h3>
-                <div className="flex items-center justify-between mt-1">
+                <div className="flex items-center gap-4 mt-2">
+                    <img
+                        src={serviceProvider?.photoURL}
+                        alt={serviceProvider?.name}
+                        className="rounded-full h-[50px] w-[50px] border-2 border-solid border-color-accent dark:border-color-accent-d"
+                    />
                     <div>
-                        <img
-                            src={serviceProvider?.photoURL}
-                            alt={serviceProvider?.name}
-                            className="rounded-full h-[40px] w-[40px] border-2 border-solid border-color-accent dark:border-color-accent-d"
-                        />
-                    </div>
-                    <div>
+                        <h3 className="font-medium">{serviceProvider?.email}</h3>
                         <h3 className="font-medium uppercase">{serviceProvider?.name}</h3>
                     </div>
                 </div>

@@ -2,16 +2,28 @@ import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import useAuth from '../../Hook/useAuth';
 import { MdError } from 'react-icons/md';
+import { RxCross1 } from 'react-icons/rx';
+import toast from 'react-hot-toast';
+import useAxiosSecure from '../../Hook/useAxiosSecure';
+import { useMutation } from '@tanstack/react-query';
 
 const BookModal = ({ modalOpen, setModalOpen, serviceDetails }) => {
-    const { register, handleSubmit, formState: { errors } } = useForm()
+    const { register, handleSubmit, reset, formState: { errors } } = useForm()
     const { user } = useAuth()
+    const axiosSecure = useAxiosSecure()
     const { _id, serviceImage, serviceName, serviceArea, servicePrice, serviceProvider, serviceDescription } = serviceDetails
 
-    const onSubmit = (data) => {
-        setModalOpen(false)
-        console.log(data);
+    const { isPending, mutateAsync } = useMutation({
+        mutationFn: async (bookNowData) => {
+            await axiosSecure.post('/add-purchase', bookNowData)
+        },
+        onSuccess: () => {
+            toast.success('Data Added Successfully!!!')
+        }
+    })
 
+    const onSubmit = async (data) => {
+        setModalOpen(false)
         const bookNowData = {
             serviceId: _id,
             serviceName,
@@ -29,14 +41,26 @@ const BookModal = ({ modalOpen, setModalOpen, serviceDetails }) => {
             serviceTakingDate: data?.serviceTakingDate,
         }
 
-        console.table(bookNowData)
+        try {
+            await mutateAsync(bookNowData)
+            reset()
+        } catch (error) {
+            toast.error(error.message)
+        }
     };
 
     return (
         <div
             className={`${modalOpen ? " scale-[1] opacity-100" : " scale-[0] opacity-0"
-                } w-full h-screen fixed top-0 left-0 z-50 bg-[#0000002a] flex items-center justify-center transition-all duration-300 `}>
+                } w-full h-screen fixed top-0 left-0 z-50 bg-[#000000c2] flex items-center justify-center transition-all duration-300 `}>
             <div className="w-[90%] lg:w-[50%] bg-[#ffffff] rounded-lg p-4 max-h-[80vh] overflow-y-auto">
+                <div className="w-full flex items-end justify-end">
+                    <RxCross1
+                        className="p-2 text-[2.5rem] hover:bg-[#e7e7e7] rounded-full transition-all duration-300 cursor-pointer"
+                        onClick={() => setModalOpen(false)}
+                    />
+                </div>
+
                 <h2 className='text-center font-bold text-5xl mb-4'>Book Service</h2>
 
                 <form onSubmit={handleSubmit(onSubmit)} className='space-y-3'>
@@ -180,14 +204,16 @@ const BookModal = ({ modalOpen, setModalOpen, serviceDetails }) => {
                             className="inputField w-full"
                             {...register("specialInstruction", { required: 'Special instruction is required', minLength: { value: 10, message: 'Must have been 10 character' } })}
                         />
-                        {errors.serviceDescription && <p className="flex text-red-500 gap-1 items-center"><MdError /> {errors.serviceDescription.message} </p>}
+                        {errors.specialInstruction && <p className="flex text-red-500 gap-1 items-center"><MdError /> {errors.specialInstruction.message} </p>}
                     </div>
 
                     <div className="w-full flex items-center justify-center">
                         <button
                             type="submit"
                             className="inputButton">
-                            Purchase
+                            {
+                                isPending ? 'Purchasing...' : 'Purchase'
+                            }
                         </button>
                     </div>
 
