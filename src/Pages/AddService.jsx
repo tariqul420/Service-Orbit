@@ -5,11 +5,13 @@ import { useMutation } from "@tanstack/react-query";
 import useAxiosSecure from "../Hook/useAxiosSecure";
 import toast from "react-hot-toast";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AddService = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm()
     const { user } = useAuth()
     const axiosSecure = useAxiosSecure()
+    const navigate = useNavigate()
 
     useEffect(() => {
         document.title = 'Add Service || Service Orbit'
@@ -21,6 +23,7 @@ const AddService = () => {
         },
         onSuccess: () => {
             toast.success('Data Added Successfully!!!')
+            navigate('/manage-service')
         }
     })
 
