@@ -108,7 +108,7 @@ const AddService = () => {
                             rows={6}
                             placeholder="Services Description"
                             className="inputField w-full"
-                            {...register("serviceDescription", { required: 'Services Description is required', maxLength: { value: 100, message: 'Description must be at most 100 characters long.' } })}
+                            {...register("serviceDescription", { required: 'Service Description is required' })}
                         />
                         {errors.serviceDescription && <p className="flex text-red-500 gap-1 items-center"><MdError /> {errors.serviceDescription.message} </p>}
                     </div>

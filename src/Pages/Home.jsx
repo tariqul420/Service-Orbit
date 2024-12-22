@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Banner from "../Components/Home/Banner";
 
 const Home = () => {
     useEffect(() => {
@@ -6,9 +7,9 @@ const Home = () => {
     }, []);
 
     return (
-        <div>
-            This is the Home page
-        </div>
+        <section>
+            <Banner />
+        </section>
     );
 };
 
