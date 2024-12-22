@@ -1,4 +1,4 @@
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect } from "react";
 import useAxiosSecure from "../Hook/useAxiosSecure";
 import useAuth from "../Hook/useAuth";
@@ -6,9 +6,11 @@ import LoadingSpinner from "../Components/Common/LoadingSpinner";
 import { Link } from "react-router-dom";
 import { RiDeleteBin2Fill } from "react-icons/ri";
 import { BiSolidEdit } from "react-icons/bi";
+import toast from "react-hot-toast";
 
 const ManageService = () => {
     const axiosSecure = useAxiosSecure()
+    const queryClient = useQueryClient();
     const { user } = useAuth()
 
     useEffect(() => {
@@ -22,7 +24,55 @@ const ManageService = () => {
             return data
         }
     })
-    console.log(data);
+
+    // Delete service
+    const deleteMutation = useMutation({
+        mutationFn: async (id) => {
+            await axiosSecure.delete(`/manage-service/${id}?email=${user?.email}`);
+        },
+        onSuccess: () => {
+            toast.success("Deleted successfully!");
+            queryClient.invalidateQueries(["manageService"]);
+        },
+        onError: (error) => {
+            toast.error(`Error: ${error.message}`);
+        },
+    });
+
+    const handleDelete = (id) => {
+        deleteMutation.mutate(id);
+    };
+
+
+    const modernDelete = id => {
+        toast(t => (
+            <div className='flex gap-3 items-center'>
+                <div>
+                    <p>
+                        Are you <b>sure?</b>
+                    </p>
+                </div>
+                <div className='gap-2 flex'>
+                    <button
+                        className='bg-red-400 text-white px-3 py-1 rounded-md'
+                        onClick={() => {
+                            toast.dismiss(t.id)
+                            handleDelete(id)
+                        }}
+                    >
+                        Yes
+                    </button>
+                    <button
+                        className='bg-green-400 text-white px-3 py-1 rounded-md'
+                        onClick={() => toast.dismiss(t.id)}
+                    >
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        ))
+    }
+
 
     if (isLoading) return <LoadingSpinner />
 
@@ -111,7 +161,8 @@ const ManageService = () => {
 
                                             <td className='px-4 py-4 text-sm whitespace-nowrap'>
                                                 <div className='flex items-center gap-x-6'>
-                                                    <button className=' transition-colors duration-200   hover:text-red-500 focus:outline-none'>
+                                                    <button
+                                                        onClick={() => modernDelete(service?._id)} className=' transition-colors duration-200   hover:text-red-500 focus:outline-none'>
                                                         <RiDeleteBin2Fill size={20} />
                                                     </button>
 
