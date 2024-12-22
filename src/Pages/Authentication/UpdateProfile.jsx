@@ -3,13 +3,17 @@ import { useNavigate } from "react-router-dom";
 import useAuth from "../../Hook/useAuth";
 import toast from "react-hot-toast";
 import { MdError } from "react-icons/md";
+import { useEffect } from "react";
 const UpdateProfile = () => {
     const { updateUserProfile, setUser } = useAuth();
     const navigate = useNavigate()
-
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = ({ fullName, photoUrl }) => {
 
+    useEffect(() => {
+        document.title = 'Update Profile || Service Orbit'
+    }, []);
+
+    const onSubmit = ({ fullName, photoUrl }) => {
         updateUserProfile({ displayName: fullName, photoURL: photoUrl })
             .then(() => {
                 setUser((prevUser) => ({

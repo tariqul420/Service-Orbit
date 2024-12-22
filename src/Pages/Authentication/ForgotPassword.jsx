@@ -3,10 +3,15 @@ import useAuth from "../../Hook/useAuth";
 import forgotPassword from '../../assets/Lottie/forgot_password.json'
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const ForgotPassword = () => {
     const navigate = useNavigate()
     const { email, setEmail, resetPassword } = useAuth()
+
+    useEffect(() => {
+        document.title = 'Forgot Password || Service Orbit'
+    }, []);
 
     const handelSendEmail = (e) => {
         e.preventDefault()

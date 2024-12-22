@@ -1,5 +1,5 @@
 import { GoogleAuthProvider } from "firebase/auth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
@@ -18,6 +18,10 @@ const Login = () => {
     const { socialAuth, setEmail, loginUser } = useAuth()
 
     const googleProvider = new GoogleAuthProvider();
+
+    useEffect(() => {
+        document.title = 'Login || Service Orbit'
+    }, []);
 
     const onSubmit = (data) => {
         const { email, password } = data;

@@ -1,5 +1,5 @@
 import { GoogleAuthProvider } from "firebase/auth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Lottie from "lottie-react";
 import { useForm } from "react-hook-form";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
@@ -18,6 +18,10 @@ const Register = () => {
     const navigate = useNavigate()
 
     const googleProvider = new GoogleAuthProvider();
+
+    useEffect(() => {
+        document.title = 'Register || Service Orbit'
+    }, []);
 
     const onSubmit = (data) => {
         const { fullName, email, password, photoUrl } = data;

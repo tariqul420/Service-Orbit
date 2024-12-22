@@ -4,11 +4,16 @@ import useAuth from "../Hook/useAuth";
 import { useMutation } from "@tanstack/react-query";
 import useAxiosSecure from "../Hook/useAxiosSecure";
 import toast from "react-hot-toast";
+import { useEffect } from "react";
 
 const AddService = () => {
     const { register, handleSubmit, formState: { errors } } = useForm()
     const { user } = useAuth()
     const axiosSecure = useAxiosSecure()
+
+    useEffect(() => {
+        document.title = 'Add Service || Service Orbit'
+    }, []);
 
     const { isPending, mutateAsync } = useMutation({
         mutationFn: async (serviceData) => {
@@ -48,7 +53,7 @@ const AddService = () => {
             {/* Register Form */}
             <div className="shadow-md backdrop-blur-3xl rounded-lg sm:py-6 sm:px-8 p-4 flex flex-col gap-5 flex-1">
                 <form onSubmit={handleSubmit(onSubmit)} className="w-full flex flex-col gap-5">
-                    <h3 className="text-[1.8rem] font-[700] text-center">
+                    <h3 className="text-[3rem] font-[700] text-center">
                         Add Service
                     </h3>
 
@@ -80,7 +85,7 @@ const AddService = () => {
                             type="text"
                             placeholder="Service Area"
                             className="inputField"
-                            {...register("serviceArea", { required: 'Services Name is required' })}
+                            {...register("serviceArea", { required: 'Services Area is required' })}
                         />
                         {errors.serviceArea && <p className="flex text-red-500 gap-1 items-center"><MdError /> {errors.serviceArea.message} </p>}
                     </div>
@@ -89,9 +94,9 @@ const AddService = () => {
                     <div>
                         <input
                             type="number"
-                            placeholder="Service Area"
+                            placeholder="Service Price"
                             className="inputField"
-                            {...register("servicePrice", { required: 'Services Name is required' })}
+                            {...register("servicePrice", { required: 'Service Price is required' })}
                         />
                         {errors.servicePrice && <p className="flex text-red-500 gap-1 items-center"><MdError /> {errors.servicePrice.message} </p>}
                     </div>
@@ -103,7 +108,7 @@ const AddService = () => {
                             rows={6}
                             placeholder="Services Description"
                             className="inputField w-full"
-                            {...register("serviceDescription", { required: 'Services Name is required', maxLength: { value: 100, message: 'Description must be at most 100 characters long.' } })}
+                            {...register("serviceDescription", { required: 'Services Description is required', maxLength: { value: 100, message: 'Description must be at most 100 characters long.' } })}
                         />
                         {errors.serviceDescription && <p className="flex text-red-500 gap-1 items-center"><MdError /> {errors.serviceDescription.message} </p>}
                     </div>
