@@ -17,7 +17,7 @@ const ManageService = () => {
         document.title = 'Manage Service || Service Orbit'
     }, []);
 
-    const { data, isLoading } = useQuery({
+    const { data: myService, isLoading } = useQuery({
         queryKey: ['manageService'],
         queryFn: async () => {
             const { data } = await axiosSecure.get(`/manage-service?email=${user?.email}`)
@@ -77,112 +77,128 @@ const ManageService = () => {
     if (isLoading) return <LoadingSpinner />
 
     return (
-        <section className='container px-4 mx-auto pt-12'>
-            <div className='flex items-center gap-x-3'>
-                <h2 className='text-lg font-medium'>My Services</h2>
+        <>
+            {
+                myService.length === 0 ? (
+                    <div
+                        className="p-6 sm:px-20 sm:py-14 flex items-center justify-center flex-col gap-[4px] rounded-xl dark:bg-gray-700 bg-white shadow-md mt-12">
+                        <img src="https://i.ibb.co/cgfgxGH/Illustrations.png" alt="empty/image" className="w-full sm:w-[200px]" />
 
-                <span className='px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full '>
-                    {data.length} Services
-                </span>
-            </div>
+                        <h1 className="text-[3rem] mt-6 font-[500]">Your No Service Available</h1>
 
-            <div className='flex flex-col my-4 mb-8'>
-                <div className='-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8'>
-                    <div className='inline-block min-w-full py-2 align-middle md:px-6 lg:px-8'>
-                        <div className='overflow-hidden border border-gray-200 dark:border-gray-600  md:rounded-lg'>
-                            <table className='min-w-full divide-y divide-gray-200 shadow-md'>
-                                <thead className='bg-gray-50 dark:bg-gray-700'>
-                                    <tr>
-                                        <th
-                                            scope='col'
-                                            className='py-3.5 px-4 text-sm font-normal text-left rtl:text-right '
-                                        >
-                                            <div className='flex items-center gap-x-3'>
-                                                <span>Title</span>
-                                            </div>
-                                        </th>
-
-                                        <th
-                                            scope='col'
-                                            className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right '
-                                        >
-                                            Image URL
-                                        </th>
-
-                                        <th
-                                            scope='col'
-                                            className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right '
-                                        >
-                                            Description
-                                        </th>
-
-                                        <th
-                                            scope='col'
-                                            className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right '
-                                        >
-                                            <span>Location</span>
-                                        </th>
-
-                                        <th
-                                            scope='col'
-                                            className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right '
-                                        >
-                                            <button className='flex items-center gap-x-2'>
-                                                <span>Price</span>
-                                            </button>
-                                        </th>
-
-                                        <th className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right '>
-                                            Edit
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody className='bg-white dark:bg-gray-700 divide-y divide-gray-200 dark:divide-gray-600'>
-                                    {
-                                        data.map(service => <tr key={service?._id}>
-                                            <td className='px-4 py-4 text-sm   whitespace-nowrap'>
-                                                {service?.serviceName}
-                                            </td>
-
-                                            <td className='px-4 py-4 text-sm   whitespace-nowrap'>
-                                                {service?.serviceImage.substring(0, 40)}...
-                                            </td>
-                                            <td className='px-4 py-4 text-sm   whitespace-nowrap'>
-                                                {service?.serviceDescription.substring(0, 40)}...
-                                            </td>
-
-                                            <td className='px-4 py-4 text-sm   whitespace-nowrap'>
-                                                {service?.serviceArea}
-                                            </td>
-
-                                            <td className='px-4 py-4 text-sm   whitespace-nowrap'>
-                                                $ {service?.servicePrice}
-                                            </td>
-
-                                            <td className='px-4 py-4 text-sm whitespace-nowrap'>
-                                                <div className='flex items-center gap-x-6'>
-                                                    <button
-                                                        onClick={() => modernDelete(service?._id)} className=' transition-colors duration-200   hover:text-red-500 focus:outline-none'>
-                                                        <RiDeleteBin2Fill size={20} />
-                                                    </button>
-
-                                                    <Link
-                                                        to={`/update-service/${service?._id}`}
-                                                        className=' transition-colors duration-200   hover:text-yellow-500 focus:outline-none'
-                                                    >
-                                                        <BiSolidEdit size={20} />
-                                                    </Link>
-                                                </div>
-                                            </td>
-                                        </tr>)
-                                    }
-                                </tbody>
-                            </table>
-                        </div>
+                        <p className="text-[0.9rem] dark:text-gray-300 text-gray-600">Whoops ... this information is not available for a moment</p>
                     </div>
-                </div>
-            </div>
-        </section>
+                ) : (
+                    <section className='container px-4 mx-auto pt-12'>
+                        <div className='flex items-center gap-x-3'>
+                            <h2 className='text-lg font-medium'>My Services</h2>
+
+                            <span className='px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full '>
+                                {myService.length} Services
+                            </span>
+                        </div>
+
+                        <div className='flex flex-col my-4 mb-8'>
+                            <div className='-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8'>
+                                <div className='inline-block min-w-full py-2 align-middle md:px-6 lg:px-8'>
+                                    <div className='overflow-hidden border border-gray-200 dark:border-gray-600  md:rounded-lg'>
+                                        <table className='min-w-full divide-y divide-gray-200 shadow-md'>
+                                            <thead className='bg-gray-50 dark:bg-gray-700'>
+                                                <tr>
+                                                    <th
+                                                        scope='col'
+                                                        className='py-3.5 px-4 text-sm font-normal text-left rtl:text-right '
+                                                    >
+                                                        <div className='flex items-center gap-x-3'>
+                                                            <span>Service Title</span>
+                                                        </div>
+                                                    </th>
+
+                                                    <th
+                                                        scope='col'
+                                                        className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right '
+                                                    >
+                                                        Image URL
+                                                    </th>
+
+                                                    <th
+                                                        scope='col'
+                                                        className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right '
+                                                    >
+                                                        Description
+                                                    </th>
+
+                                                    <th
+                                                        scope='col'
+                                                        className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right '
+                                                    >
+                                                        <span>Location</span>
+                                                    </th>
+
+                                                    <th
+                                                        scope='col'
+                                                        className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right '
+                                                    >
+                                                        <button className='flex items-center gap-x-2'>
+                                                            <span>Price</span>
+                                                        </button>
+                                                    </th>
+
+                                                    <th className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right '>
+                                                        Edit
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody className='bg-white dark:bg-gray-700 divide-y divide-gray-200 dark:divide-gray-600'>
+                                                {
+                                                    myService.map(service => <tr key={service?._id}>
+                                                        <td className='px-4 py-4 text-sm   whitespace-nowrap'>
+                                                            {service?.serviceName}
+                                                        </td>
+
+                                                        <td className='px-4 py-4 text-sm   whitespace-nowrap'>
+                                                            {service?.serviceImage.substring(0, 40)}...
+                                                        </td>
+                                                        <td className='px-4 py-4 text-sm   whitespace-nowrap'>
+                                                            {service?.serviceDescription.substring(0, 40)}...
+                                                        </td>
+
+                                                        <td className='px-4 py-4 text-sm   whitespace-nowrap'>
+                                                            {service?.serviceArea}
+                                                        </td>
+
+                                                        <td className='px-4 py-4 text-sm   whitespace-nowrap'>
+                                                            $ {service?.servicePrice}
+                                                        </td>
+
+                                                        <td className='px-4 py-4 text-sm whitespace-nowrap'>
+                                                            <div className='flex items-center gap-x-6'>
+                                                                <button
+                                                                    onClick={() => modernDelete(service?._id)} className=' transition-colors duration-200   hover:text-red-500 focus:outline-none'>
+                                                                    <RiDeleteBin2Fill size={20} />
+                                                                </button>
+
+                                                                <Link
+                                                                    to={`/update-service/${service?._id}`}
+                                                                    className=' transition-colors duration-200   hover:text-yellow-500 focus:outline-none'
+                                                                >
+                                                                    <BiSolidEdit size={20} />
+                                                                </Link>
+                                                            </div>
+                                                        </td>
+                                                    </tr>)
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                )
+            }
+
+        </>
     );
 };
 

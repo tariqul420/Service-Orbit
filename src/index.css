@@ -35,10 +35,32 @@ nav a:hover {
 nav a.active:hover {
   text-decoration: none;
 }
-
-.rating svg {
-  display: inline;
+/* 
+.pagination {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+  font-size: 102rem;
+  gap: 5px;
 }
+
+.pagination .page-num {
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: 400;
+}
+
+.pagination .page-num:hover {
+  background-color: #ff9800;
+  color: white;
+}
+
+.pagination .active {
+  background-color: #ff9800;
+} */
 
 .dark nav a.active {
   color: #ff9800;
