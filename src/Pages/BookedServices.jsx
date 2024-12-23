@@ -27,7 +27,7 @@ const BookedServices = () => {
             {
                 bookedService.length === 0 ? (
                     <div
-                        className="p-6 sm:px-20 sm:py-14 flex items-center justify-center flex-col gap-[4px] rounded-xl dark:bg-gray-700 bg-white shadow-md mt-12">
+                        className="p-6 sm:px-20 sm:py-14 flex items-center justify-center flex-col gap-[4px] rounded-xl dark:bg-gray-700 bg-white shadow-md my-12">
                         <img src="https://i.ibb.co/cgfgxGH/Illustrations.png" alt="empty/image" className="w-full sm:w-[200px]" />
 
                         <h1 className="text-[3rem] mt-6 font-[500]">Your No Service Available</h1>
@@ -118,12 +118,12 @@ const BookedServices = () => {
                                                         </td>
                                                         <td className='px-4 py-4 text-sm whitespace-nowrap'>
                                                             <div
-                                                                className={`inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-yellow-100/60 text-yellow-500`}
+                                                                className={`inline-flex items-center px-3 py-1 rounded-full gap-x-2 font-medium ${service?.serviceStatus === 'Completed' && 'bg-green-100 text-green-500'} ${service?.serviceStatus === 'pending' && 'bg-amber-100 text-amber-500'} ${service?.serviceStatus === 'Working' && 'bg-blue-100 text-blue-500'}`}
                                                             >
                                                                 <span
-                                                                    className={`h-1.5 w-1.5 rounded-full bg-yellow-500 `}
+                                                                    className={`h-1.5 w-1.5 rounded-full ${service?.serviceStatus === 'Completed' && 'bg-green-500'} ${service?.serviceStatus === 'pending' && 'bg-yellow-500'} ${service?.serviceStatus === 'Working' && 'bg-blue-500'}`}
                                                                 ></span>
-                                                                <h2 className='text-sm font-normal '>{service?.serviceStatus
+                                                                <h2 className='text-sm font-medium capitalize '>{service?.serviceStatus
                                                                 }</h2>
                                                             </div>
                                                         </td>
