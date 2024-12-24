@@ -37,45 +37,45 @@ const Navbar = () => {
                                 Services
                             </NavLink>
                         </li>
-                        <li className="navBarLink">
+                        <li>
                             <div className="flex items-center gap-[10px] cursor-pointer relative"
                                 onClick={() => setDashboardOpen(!dashboardOpen)}
                             >
 
-                                <div className="relative">
+                                <div className="relative navBarLink">
                                     <p>Dashboard</p>
                                 </div>
 
                                 <div
                                     className={`${dashboardOpen ? "translate-y-0 opacity-100 z-[1000]" : "translate-y-[10px] opacity-0 z-[-1]"} bg-white w-max rounded-md shadow-md absolute top-[45px] right-0 p-[10px] flex flex-col transition-all duration-300 gap-[5px] dark:bg-gray-700`}>
-                                    <Link to='/add-service'>
+                                    <NavLink to='/add-service' className="navBarLink">
                                         <p
                                             className="flex items-center gap-[5px] rounded-md p-[8px] pr-[45px] py-[3px] text-[1rem] hover:bg-gray-50 dark:hover:bg-gray-600/30">
                                             <RiUserAddFill />
                                             Add Service
                                         </p>
-                                    </Link>
-                                    <Link to='/manage-service'>
+                                    </NavLink>
+                                    <NavLink to='/manage-service' className='navBarLink'>
                                         <p
                                             className="flex items-center gap-[5px] rounded-md p-[8px] pr-[45px] py-[3px] text-[1rem] hover:bg-gray-50 dark:hover:bg-gray-600/30">
                                             <MdManageAccounts />
                                             Manage Service
                                         </p>
-                                    </Link>
-                                    <Link to='/booked-service'>
+                                    </NavLink>
+                                    <NavLink to='/booked-service' className='navBarLink'>
                                         <p
                                             className="flex items-center gap-[5px] rounded-md p-[8px] pr-[45px] py-[3px] text-[1rem] hover:bg-gray-50 dark:hover:bg-gray-600/30">
                                             <FaBookmark />
                                             Booked-Services
                                         </p>
-                                    </Link>
-                                    <Link to='/service-to-do'>
+                                    </NavLink>
+                                    <NavLink to='/service-to-do' className='navBarLink'>
                                         <p
                                             className="flex items-center gap-[5px] rounded-md p-[8px] pr-[45px] py-[3px] text-[1rem] hover:bg-gray-50 dark:hover:bg-gray-600/30">
                                             <MdMedicalServices />
                                             Service-To-Do
                                         </p>
-                                    </Link>
+                                    </NavLink>
                                 </div>
 
                                 <IoIosArrowUp

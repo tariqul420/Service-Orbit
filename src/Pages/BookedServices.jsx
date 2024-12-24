@@ -98,7 +98,7 @@ const BookedServices = () => {
                                             <tbody className='bg-white dark:bg-gray-700 divide-y divide-gray-200 dark:divide-gray-600'>
                                                 {
                                                     bookedService.map(service => <tr key={service?._id}>
-                                                        <td className='px-4 py-4 text-sm   whitespace-nowrap'>
+                                                        <td className='px-4 py-4 text-sm   whitespace-nowrap capitalize'>
                                                             {service?.serviceName}
                                                         </td>
 
@@ -106,7 +106,7 @@ const BookedServices = () => {
                                                             {service?.serviceProvider?.email}
                                                         </td>
 
-                                                        <td className='px-4 py-4 text-sm   whitespace-nowrap'>
+                                                        <td className='px-4 py-4 text-sm   whitespace-nowrap capitalize'>
                                                             {service?.serviceProvider?.name}
                                                         </td>
                                                         <td className='px-4 py-4 text-sm   whitespace-nowrap'>
