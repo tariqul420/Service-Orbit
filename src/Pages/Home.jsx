@@ -6,6 +6,8 @@ import LoadingSpinner from "../Components/Common/LoadingSpinner";
 import { Link } from "react-router-dom";
 import ServiceCard from "../Components/Common/ServiceCard";
 import BestProvider from "../Components/Home/BestProvider";
+import ToldCustomers from "../Components/Home/ToldCustomers";
+import Slider from "react-slick";
 
 const Home = () => {
 
@@ -14,21 +16,35 @@ const Home = () => {
     }, []);
 
     const { data, isLoading } = useQuery({
-        queryKey: ['popularServices', 'bestProvider', 'banner'],
+        queryKey: ['popularServices', 'bestProvider', 'banner', "toldCustomer"],
         queryFn: async () => {
-            const [popularServices, bestProvider, banner] = await Promise.all([
+            const [popularServices, bestProvider, banner, toldCustomer] = await Promise.all([
                 axios.get(`${import.meta.env.VITE_API_URL}/popular-services`),
                 axios.get(`./bestProvider.json`),
-                axios.get(`${import.meta.env.VITE_API_URL}/banner`)
+                axios.get(`${import.meta.env.VITE_API_URL}/banner`),
+                axios.get(`./ToldCustomers.json`)
             ]);
 
             return {
                 popularServices: popularServices.data,
                 bestProvider: bestProvider.data,
-                banner: banner.data
+                banner: banner.data,
+                toldCustomer: toldCustomer.data
             };
         }
     });
+
+    const settings = {
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        infinite: true,
+        speed: 600,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: "0px",
+    }
 
     if (isLoading) return <LoadingSpinner />
 
@@ -75,6 +91,19 @@ const Home = () => {
                     {
                         data?.bestProvider.map((service, index) => <BestProvider key={index} service={service} />)
                     }
+                </div>
+            </div>
+
+            {/* Our Stories As Told By Customers */}
+            <div className="mb-28">
+                <h2 className="text-6xl font-bold text-center">Our Stories As Told By <br className="max-sm:hidden" /> Customers</h2>
+
+                <div className="mt-12 flex flex-col gap-8">
+                    <Slider {...settings}>
+                        {
+                            data?.toldCustomer.map((review, index) => <ToldCustomers key={index} review={review} />)
+                        }
+                    </Slider>
                 </div>
             </div>
         </section>

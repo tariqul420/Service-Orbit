@@ -14,13 +14,6 @@
         "rating": 4.5
     },
     {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf66Cj--hpInzr5yi7vx3fvlfptksuyX3Hhgr1OODltTdY-eGBWJ9c3SF-iDukaFjPH0Y&usqp=CAU",
-        "name": "Sarah Lee",
-        "role": "Cleaner, Operator",
-        "price": 18,
-        "rating": 4.5
-    },
-    {
         "image": "https://www.coursesonline.co.uk/wp-content/uploads/Subject-IT-Support.jpeg?height=485&dpr=2",
         "name": "Michael Smith",
         "role": "Technician, Support",
@@ -42,24 +35,10 @@
         "rating": 4.9
     },
     {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVp-GszrtZHZ1eFa0Ef7xnJzTHcwFw0LmVQu4BpLL7NANj1hGPeXJWSZGTNcAJlXo09mw&usqp=CAU",
-        "name": "Olivia Green",
-        "role": "Plumber, Expert",
-        "price": 32,
-        "rating": 4.7
-    },
-    {
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB5JGqi54_yXikjKonJwCY-y00fllU0IS_2-G20Zn52Wpga09nq63X_DfN1VTze6C07Uc&usqp=CAU",
         "name": "James Williams",
         "role": "Electrician, Specialist",
         "price": 40,
         "rating": 4.9
-    },
-    {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWhGtk6exkQNMjdHVBH9RSghOQBZPy3MFoUHCsTDtSxJGI_49p80S1rrwPUh4MUQgyKVY&usqp=CAU",
-        "name": "Lucas Martinez",
-        "role": "Gardener, Landscaper",
-        "price": 25,
-        "rating": 4.6
     }
 ]
