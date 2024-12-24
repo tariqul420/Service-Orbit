@@ -12,25 +12,71 @@ const Home = () => {
         document.title = 'Service Orbit'
     }, []);
 
-    const { data: popularServices, isLoading } = useQuery({
-        queryKey: ['popularServices'],
+    const { data, isLoading } = useQuery({
+        queryKey: ['popularServices', 'bestProvider', 'banner'],
         queryFn: async () => {
-            const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/popular-services`)
-            return data
+            const [popularServices, bestProvider, banner] = await Promise.all([
+                axios.get(`${import.meta.env.VITE_API_URL}/popular-services`),
+                axios.get(`./bestProvider.json`),
+                axios.get(`${import.meta.env.VITE_API_URL}/banner`)
+            ]);
+
+            return {
+                popularServices: popularServices.data,
+                bestProvider: bestProvider.data,
+                banner: banner.data
+            };
         }
-    })
+    });
+
+    // const settings = {
+    //     dots: true,
+    //     infinite: false,
+    //     speed: 500,
+    //     slidesToShow: 4,
+    //     slidesToScroll: 4,
+    //     initialSlide: 0,
+    //     responsive: [
+    //         {
+    //             breakpoint: 1024,
+    //             settings: {
+    //                 slidesToShow: 3,
+    //                 slidesToScroll: 3,
+    //                 infinite: true,
+    //                 dots: true
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 600,
+    //             settings: {
+    //                 slidesToShow: 2,
+    //                 slidesToScroll: 2,
+    //                 initialSlide: 2
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 480,
+    //             settings: {
+    //                 slidesToShow: 1,
+    //                 slidesToScroll: 1
+    //             }
+    //         }
+    //     ]
+    // };
 
     if (isLoading) return <LoadingSpinner />
 
     return (
         <section>
-            <Banner />
+            {/* Banner Slider */}
+            <Banner banner={data?.banner} />
 
+            {/* Popular Services */}
             <div className="mb-28">
                 <h2 className="text-6xl font-bold text-center">Popular Services</h2>
 
                 {
-                    popularServices.length === 0 ? (
+                    data?.popularServices.length === 0 ? (
                         <div
                             className="p-6 sm:px-20 sm:py-14 flex items-center justify-center flex-col gap-[4px] rounded-xl dark:bg-gray-700 bg-white shadow-md mt-12">
                             <img src="https://i.ibb.co/cgfgxGH/Illustrations.png" alt="empty/image" className="w-full sm:w-[200px]" />
@@ -42,7 +88,7 @@ const Home = () => {
                     ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20">
                             {
-                                popularServices.map(service => <ServiceCard key={service?._id} service={service} />)
+                                data?.popularServices.map(service => <ServiceCard key={service?._id} service={service} />)
                             }
                         </div>
                     )
@@ -53,6 +99,11 @@ const Home = () => {
                         Show all
                     </button>
                 </Link>
+            </div>
+
+            {/* Best Service Provider */}
+            <div className="mb-28">
+                <h2 className="text-6xl font-bold text-center">Best Service Provider</h2>
             </div>
         </section>
     );

@@ -3,21 +3,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
-import LoadingSpinner from "../Common/LoadingSpinner";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const Banner = () => {
-    const { data: banner, isLoading } = useQuery({
-        queryKey: ['banner'],
-        queryFn: async () => {
-            const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/banner`)
-            return data
-        },
-    })
+const Banner = ({ banner }) => {
 
-    if (isLoading) return <LoadingSpinner />
 
     return (
         <div className="swiper mySwiper w-11/12 mx-auto mb-28">
@@ -78,5 +68,9 @@ const Banner = () => {
         </div>
     );
 };
+
+Banner.propTypes = {
+    banner: PropTypes.array.isRequired
+}
 
 export default Banner;
