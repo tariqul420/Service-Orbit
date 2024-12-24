@@ -25,6 +25,7 @@ const BestProvider = ({ service }) => {
 
     return (
         <div
+            data-aos="zoom-in-up"
             className="shadow-lg border border-solid border-gray-300 p-3 rounded-xl dark:bg-gray-700 bg-white"
         >
             <img

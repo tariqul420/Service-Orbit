@@ -8,6 +8,7 @@ import ServiceCard from "../Components/Common/ServiceCard";
 import BestProvider from "../Components/Home/BestProvider";
 import ToldCustomers from "../Components/Home/ToldCustomers";
 import Slider from "react-slick";
+import Aos from "aos";
 
 const Home = () => {
 
@@ -45,6 +46,16 @@ const Home = () => {
         centerMode: true,
         centerPadding: "0px",
     }
+
+    useEffect(() => {
+        Aos.init({
+            offset: 200,
+            duration: 600,
+            easing: "ease-in-sine",
+            delay: 100,
+            once: false,
+        });
+    }, []);
 
     if (isLoading) return <LoadingSpinner />
 

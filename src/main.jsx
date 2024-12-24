@@ -7,6 +7,7 @@ import AuthProvider from './Provider/AuthProvider'
 import { Toaster } from 'react-hot-toast'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "aos/dist/aos.css";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 const queryClient = new QueryClient()
