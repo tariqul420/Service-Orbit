@@ -5,6 +5,7 @@ import axios from "axios";
 import LoadingSpinner from "../Components/Common/LoadingSpinner";
 import { Link } from "react-router-dom";
 import ServiceCard from "../Components/Common/ServiceCard";
+import BestProvider from "../Components/Home/BestProvider";
 
 const Home = () => {
 
@@ -28,41 +29,6 @@ const Home = () => {
             };
         }
     });
-
-    // const settings = {
-    //     dots: true,
-    //     infinite: false,
-    //     speed: 500,
-    //     slidesToShow: 4,
-    //     slidesToScroll: 4,
-    //     initialSlide: 0,
-    //     responsive: [
-    //         {
-    //             breakpoint: 1024,
-    //             settings: {
-    //                 slidesToShow: 3,
-    //                 slidesToScroll: 3,
-    //                 infinite: true,
-    //                 dots: true
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 600,
-    //             settings: {
-    //                 slidesToShow: 2,
-    //                 slidesToScroll: 2,
-    //                 initialSlide: 2
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 480,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1
-    //             }
-    //         }
-    //     ]
-    // };
 
     if (isLoading) return <LoadingSpinner />
 
@@ -104,6 +70,12 @@ const Home = () => {
             {/* Best Service Provider */}
             <div className="mb-28">
                 <h2 className="text-6xl font-bold text-center">Best Service Provider</h2>
+
+                <div className="grid grid-cols-3 gap-6 mt-12">
+                    {
+                        data?.bestProvider.map((service, index) => <BestProvider key={index} service={service} />)
+                    }
+                </div>
             </div>
         </section>
     );

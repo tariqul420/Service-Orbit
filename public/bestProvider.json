@@ -7,6 +7,13 @@
         "rating": 4.7
     },
     {
+        "image": "https://media.istockphoto.com/id/612495778/photo/gardener-at-gardening.jpg?s=612x612&w=0&k=20&c=4Rs5qIlRaPvOcFJqsWzQ5-vLG-6OiIifeYF-eLF-5Jc=",
+        "name": "Ava Clark",
+        "role": "Gardener, Landscaper",
+        "price": 22,
+        "rating": 4.5
+    },
+    {
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf66Cj--hpInzr5yi7vx3fvlfptksuyX3Hhgr1OODltTdY-eGBWJ9c3SF-iDukaFjPH0Y&usqp=CAU",
         "name": "Sarah Lee",
         "role": "Cleaner, Operator",
@@ -49,24 +56,10 @@
         "rating": 4.9
     },
     {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1BF1BJoHCjc0LZPha6aCCRf9tEA41GprtxavDkcow1S0aNt66BoifRBAocj3azxfcwJE&usqp=CAU",
-        "name": "Sophia Harris",
-        "role": "Electrician, Specialist",
-        "price": 38,
-        "rating": 4.8
-    },
-    {
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWhGtk6exkQNMjdHVBH9RSghOQBZPy3MFoUHCsTDtSxJGI_49p80S1rrwPUh4MUQgyKVY&usqp=CAU",
         "name": "Lucas Martinez",
         "role": "Gardener, Landscaper",
         "price": 25,
         "rating": 4.6
-    },
-    {
-        "image": "https://media.istockphoto.com/id/612495778/photo/gardener-at-gardening.jpg?s=612x612&w=0&k=20&c=4Rs5qIlRaPvOcFJqsWzQ5-vLG-6OiIifeYF-eLF-5Jc=",
-        "name": "Ava Clark",
-        "role": "Gardener, Landscaper",
-        "price": 22,
-        "rating": 4.5
     }
 ]
