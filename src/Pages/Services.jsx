@@ -3,12 +3,17 @@ import { useEffect, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import LoadingSpinner from "../Components/Common/LoadingSpinner";
 import ServiceCard from "../Components/Common/ServiceCard";
+import ReactPaginate from "react-paginate";
 // import ReactPaginate from "react-paginate"
 
 const Services = () => {
     const [search, setSearch] = useState('')
     const [services, setServices] = useState([])
     const [loading, setLoading] = useState(true)
+    const [currentItems, setCurrentItems] = useState(null)
+    const [pageCount, setPageCount] = useState(0)
+    const [itemOffset, setItemOffset] = useState(0)
+    const itemsPerPage = 9
 
     useEffect(() => {
         document.title = 'Services || Service Orbit'
@@ -21,6 +26,17 @@ const Services = () => {
                 setLoading(false)
             })
     }, [search])
+
+    useEffect(() => {
+        const endOffset = itemOffset + itemsPerPage
+        setCurrentItems(services.slice(itemOffset, endOffset))
+        setPageCount(Math.ceil(services.length / itemsPerPage))
+    }, [itemOffset, services]);
+
+    const handelPageClick = (event) => {
+        const newOffset = (event.selected * itemsPerPage) % services.length
+        setItemOffset(newOffset)
+    }
 
     if (loading) return <LoadingSpinner />
 
@@ -55,12 +71,27 @@ const Services = () => {
                     ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20">
                             {
-                                services.map(service => <ServiceCard key={service._id} service={service} />)
+                                currentItems.map(service => <ServiceCard key={service._id} service={service} />)
                             }
                         </div>
                     )
                 }
             </section>
+
+            <ReactPaginate
+                breakLabel="..."
+                nextLabel="Next >"
+                onPageChange={handelPageClick}
+                pageRangeDisplayed={3}
+                pageCount={pageCount}
+                previousLabel="< Previous"
+                renderOnZeroPageCount={null}
+                containerClassName="pagination"
+                pageLinkClassName="page-num"
+                previousLinkClassName="page-num"
+                nextLinkClassName="page-num"
+                activeLinkClassName="active"
+            />
         </>
     );
 };

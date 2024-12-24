@@ -35,32 +35,51 @@ nav a:hover {
 nav a.active:hover {
   text-decoration: none;
 }
-/* 
+
 .pagination {
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 5rem;
-  font-size: 102rem;
-  gap: 5px;
+  margin-top: 5rem;
+  font-size: 1.2rem;
+  gap: 10px;
+}
+
+.dark .pagination .page-num {
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: 600;
+  background-color: #374151;
 }
 
 .pagination .page-num {
   padding: 8px 15px;
   cursor: pointer;
   border-radius: 3px;
-  font-weight: 400;
+  font-weight: 600;
+  background-color: #e5e7eb;
 }
 
-.pagination .page-num:hover {
-  background-color: #ff9800;
+.dark .pagination .page-num:hover {
+  background-color: #4b5563;
   color: white;
 }
 
-.pagination .active {
+.pagination .page-num:hover {
+  background-color: #d1d5db;
+}
+
+.dark .pagination .active {
   background-color: #ff9800;
-} */
+}
+
+.pagination .active {
+  background-color: #4caf50;
+  color: white;
+}
 
 .dark nav a.active {
   color: #ff9800;

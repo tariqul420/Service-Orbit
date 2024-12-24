@@ -52,7 +52,7 @@ const ServiceToDo = () => {
                         className="p-6 sm:px-20 sm:py-14 flex items-center justify-center flex-col gap-[4px] rounded-xl dark:bg-gray-700 bg-white shadow-md my-12">
                         <img src="https://i.ibb.co/cgfgxGH/Illustrations.png" alt="empty/image" className="w-full sm:w-[200px]" />
 
-                        <h1 className="text-[3rem] mt-6 font-[500]">No Service Request Available</h1>
+                        <h1 className="text-[3rem] mt-6 font-[500] text-center">No Service Request Available</h1>
 
                         <p className="text-[0.9rem] dark:text-gray-300 text-gray-600">Whoops ... this information is not available for a moment</p>
                     </div>
