@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
 import { TiLocation } from "react-icons/ti";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const ServiceCard = ({ service }) => {
     const { _id, serviceImage, serviceName, serviceArea, servicePrice, serviceDescription, serviceProvider } = service
+    const location = useLocation()
 
     return (
         <div
-            data-aos="zoom-in-down"
+            data-aos={location.pathname === '/' ? "zoom-in-down" : ""}
             className="p-3 rounded-2xl border border-solid border-color-accent dark:border-color-accent-d flex gap-4 bg-white dark:bg-gray-700 shadow-lg max-h-[345px]">
             <div className="w-[45%]">
                 <img className="rounded-lg h-full w-full object-cover" src={serviceImage} alt="" />

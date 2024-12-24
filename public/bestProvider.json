@@ -1,41 +1,41 @@
 [
     {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbawHelpKsnBEUVaVK_U3_OdXLOZr-VWRhilSfuWN1L-oTgJHoj727EI49XIGQ95mrKN4&usqp=CAU",
+        "image": "https://img.freepik.com/free-photo/medium-shot-smiley-man-with-cleaning-cart_23-2149345546.jpg?ga=GA1.1.907550574.1724592862&semt=ais_hybrid",
         "name": "John Doe",
         "role": "Cleaner, Operator",
         "price": 20,
         "rating": 4.7
     },
     {
-        "image": "https://media.istockphoto.com/id/612495778/photo/gardener-at-gardening.jpg?s=612x612&w=0&k=20&c=4Rs5qIlRaPvOcFJqsWzQ5-vLG-6OiIifeYF-eLF-5Jc=",
+        "image": "https://img.freepik.com/free-photo/bearded-man-holding-hose-standing-watering-plants-unrecognizable-blurred-colleague-growing-flowers-two-gardeners-wearing-uniform-working-hothouse-gardening-activity-summer-concept_74855-12690.jpg?ga=GA1.1.907550574.1724592862&semt=ais_hybrid",
         "name": "Ava Clark",
         "role": "Gardener, Landscaper",
         "price": 22,
         "rating": 4.5
     },
     {
-        "image": "https://www.coursesonline.co.uk/wp-content/uploads/Subject-IT-Support.jpeg?height=485&dpr=2",
+        "image": "https://img.freepik.com/free-photo/repairmen-working-with-computer_23-2147897970.jpg?ga=GA1.1.907550574.1724592862&semt=ais_hybrid",
         "name": "Michael Smith",
         "role": "Technician, Support",
         "price": 30,
         "rating": 4.8
     },
     {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3GTyEJCKExH8klTXY67ItB_sN28BdOM1xKuJk3lAktqekycKsuFzWITEBW8YgnKEJ6Q4&usqp=CAU",
+        "image": "https://img.freepik.com/premium-vector/tech-support-icon-3d-illustration-from-engineering-collection-creative-tech-support-3d-icon-web-design-templates-infographics-more_676904-3222.jpg?ga=GA1.1.907550574.1724592862&semt=ais_hybrid",
         "name": "Emma Brown",
         "role": "Technician, Support",
         "price": 28,
         "rating": 4.6
     },
     {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmktWMn0ahf1-fx8Y7ChiOHkxeDe9A6nsgVW5F_TUyRByBfH3yZLiMFJAmFBLmPSr40zQ&usqp=CAU",
+        "image": "https://img.freepik.com/free-photo/sanitary-technician-gesturing-thumb-up_23-2147772204.jpg?ga=GA1.1.907550574.1724592862&semt=ais_hybrid",
         "name": "David Johnson",
         "role": "Plumber, Expert",
         "price": 35,
         "rating": 4.9
     },
     {
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB5JGqi54_yXikjKonJwCY-y00fllU0IS_2-G20Zn52Wpga09nq63X_DfN1VTze6C07Uc&usqp=CAU",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-electrician-cartoon-illustration_23-2151046712.jpg?ga=GA1.1.907550574.1724592862&semt=ais_hybrid",
         "name": "James Williams",
         "role": "Electrician, Specialist",
         "price": 40,

@@ -31,11 +31,11 @@ const BestProvider = ({ service }) => {
             <img
                 src={image}
                 alt={name}
-                className="w-full rounded-md h-[250px]"
+                className="w-full rounded-md h-[250px] object-cover"
             />
             <div className="flex items-center justify-between mt-3">
                 <div>
-                    <h3 className="font-medium text-xl">{name}</h3>
+                    <h3 className="font-medium text-xl uppercase">{name}</h3>
                     <p className="text-lg">{role}</p>
                 </div>
                 <div>

@@ -32,7 +32,7 @@ const ToldCustomers = ({ review: customerReview }) => {
                     &quot; {review} &quot;
                 </p>
                 <p className="mt-6">
-                    <span className="text-3xl font-medium">{name},</span>
+                    <span className="text-3xl font-medium uppercase">{name},</span>
                     <span className="text-xl ml-2">{profession}</span></p>
             </div>
         </div>
