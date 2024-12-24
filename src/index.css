@@ -47,6 +47,27 @@ nav a.active:hover {
   gap: 10px;
 }
 
+@media (max-width: 768px) {
+  .pagination {
+    font-size: 1rem;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination {
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    gap: 5px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .pagination li {
+    padding: 5px;
+  }
+}
+
 .dark .pagination .page-num {
   padding: 8px 15px;
   cursor: pointer;
