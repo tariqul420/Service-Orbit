@@ -56,7 +56,7 @@ const ServiceDetails = () => {
                             <img
                                 src={serviceProvider?.photoURL}
                                 alt={serviceProvider?.name}
-                                className="rounded-full h-[50px] w-[50px] border-2 border-solid border-color-accent dark:border-color-accent-d"
+                                className="rounded-full h-[50px] w-[50px] border-2 border-solid border-color-accent dark:border-color-accent-d object-cover"
                             />
                             <div>
                                 <h3 className="font-medium">{serviceProvider?.email}</h3>

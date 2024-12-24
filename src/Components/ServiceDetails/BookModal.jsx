@@ -27,7 +27,7 @@ const BookModal = ({ modalOpen, setModalOpen, serviceDetails }) => {
     })
 
     const onSubmit = async (data) => {
-        if (serviceProvider?.email === user?.email) return toast.error('Action not permitted!')
+        // if (serviceProvider?.email === user?.email) return toast.error('Action not permitted!')
 
         const bookNowData = {
             serviceId: _id,

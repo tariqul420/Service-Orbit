@@ -19,7 +19,7 @@ const ToldCustomers = ({ review: customerReview }) => {
     };
 
     return (
-        <div className="flex border border-solid border-color-accent dark:border-color-accent-d p-4 rounded-lg">
+        <div className="flex border border-solid border-color-accent dark:border-white dark:bg-gray-700 p-4 rounded-lg shadow-md">
             <div className="w-[25%]">
                 <img className="w-[250px] h-[250px] rounded-full object-cover" src={image} alt="" />
             </div>
