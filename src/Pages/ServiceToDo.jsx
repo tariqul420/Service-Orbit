@@ -34,10 +34,7 @@ const ServiceToDo = () => {
         }
     })
 
-    console.log(serviceToDo);
-
-    const handelActionChange = async (id, prevStatus, currentStatus) => {
-        console.table({ id, prevStatus, currentStatus })
+    const handelActionChange = async (id, currentStatus) => {
         try {
             await mutateAsync({ id, currentStatus })
         } catch (error) {
@@ -110,9 +107,14 @@ const ServiceToDo = () => {
                                                         scope='col'
                                                         className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right '
                                                     >
-                                                        <button className='flex items-center gap-x-2'>
-                                                            <span>Price</span>
-                                                        </button>
+                                                        <span>Price</span>
+                                                    </th>
+
+                                                    <th
+                                                        scope='col'
+                                                        className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right '
+                                                    >
+                                                        <span>Talking Date</span>
                                                     </th>
 
                                                     <th className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right '>
@@ -127,7 +129,7 @@ const ServiceToDo = () => {
                                             <tbody className='bg-white dark:bg-gray-700 divide-y divide-gray-200 dark:divide-gray-600'>
                                                 {
                                                     serviceToDo.map(service => <tr key={service?._id}>
-                                                        <td className='px-4 py-4 text-sm  whitespace-nowrap'>
+                                                        <td className='px-4 py-4 text-sm  whitespace-nowrap capitalize'>
                                                             {service?.serviceName}
                                                         </td>
                                                         <td className='px-4 py-4 text-sm  whitespace-nowrap'>
@@ -144,6 +146,9 @@ const ServiceToDo = () => {
                                                         <td className='px-4 py-4 text-sm capitalize  whitespace-nowrap'>
                                                             $ {service?.servicePrice}
                                                         </td>
+                                                        <td className='px-4 py-4 text-sm capitalize  whitespace-nowrap'>
+                                                            {service?.serviceTakingDate}
+                                                        </td>
                                                         <td className='px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap'>
                                                             <div className={`inline-flex items-center px-3 py-1 rounded-full gap-x-2 ${service?.serviceStatus === 'Completed' && 'bg-green-100 text-green-500'} ${service?.serviceStatus === 'pending' && 'bg-amber-100 text-amber-500'} ${service?.serviceStatus === 'Working' && 'bg-blue-100 text-blue-500'}`}>
                                                                 <span className={`h-1.5 w-1.5 rounded-full ${service?.serviceStatus === 'Completed' && 'bg-green-500'} ${service?.serviceStatus === 'pending' && 'bg-yellow-500'} ${service?.serviceStatus === 'Working' && 'bg-blue-500'}`}></span>
@@ -154,14 +159,14 @@ const ServiceToDo = () => {
                                                             <div className='flex items-center gap-x-6'>
                                                                 <button
                                                                     disabled={service?.serviceStatus === 'Completed' || service?.serviceStatus === 'Working'}
-                                                                    onClick={() => handelActionChange(service?._id, service?.serviceStatus, 'Working')}
+                                                                    onClick={() => handelActionChange(service?._id, 'Working')}
                                                                     className='disabled:cursor-not-allowed transition-colors duration-200   hover:text-red-500 focus:outline-none'>
                                                                     <PiShareNetworkFill size={22} />
                                                                 </button>
 
                                                                 <button
                                                                     disabled={service?.serviceStatus === 'pending' || service?.serviceStatus === 'Completed'}
-                                                                    onClick={() => handelActionChange(service?._id, service?.serviceStatus, 'Completed')}
+                                                                    onClick={() => handelActionChange(service?._id, 'Completed')}
                                                                     className='disabled:cursor-not-allowed transition-colors duration-200   hover:text-green-500 focus:outline-none'>
                                                                     <GrCompliance size={20} />
                                                                 </button>
