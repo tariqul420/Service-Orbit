@@ -4,7 +4,6 @@ import { IoSearch } from "react-icons/io5";
 import LoadingSpinner from "../Components/Common/LoadingSpinner";
 import ServiceCard from "../Components/Common/ServiceCard";
 import ReactPaginate from "react-paginate";
-// import ReactPaginate from "react-paginate"
 
 const Services = () => {
     const [search, setSearch] = useState('')
@@ -13,7 +12,7 @@ const Services = () => {
     const [currentItems, setCurrentItems] = useState(null)
     const [pageCount, setPageCount] = useState(0)
     const [itemOffset, setItemOffset] = useState(0)
-    const itemsPerPage = 9
+    const itemsPerPage = 8
 
     useEffect(() => {
         document.title = 'Services || Service Orbit'

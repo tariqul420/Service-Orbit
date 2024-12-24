@@ -1,0 +1,72 @@
+[
+    {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbawHelpKsnBEUVaVK_U3_OdXLOZr-VWRhilSfuWN1L-oTgJHoj727EI49XIGQ95mrKN4&usqp=CAU",
+        "name": "John Doe",
+        "role": "Cleaner, Operator",
+        "price": 20,
+        "rating": 4.7
+    },
+    {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf66Cj--hpInzr5yi7vx3fvlfptksuyX3Hhgr1OODltTdY-eGBWJ9c3SF-iDukaFjPH0Y&usqp=CAU",
+        "name": "Sarah Lee",
+        "role": "Cleaner, Operator",
+        "price": 18,
+        "rating": 4.5
+    },
+    {
+        "image": "https://www.coursesonline.co.uk/wp-content/uploads/Subject-IT-Support.jpeg?height=485&dpr=2",
+        "name": "Michael Smith",
+        "role": "Technician, Support",
+        "price": 30,
+        "rating": 4.8
+    },
+    {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3GTyEJCKExH8klTXY67ItB_sN28BdOM1xKuJk3lAktqekycKsuFzWITEBW8YgnKEJ6Q4&usqp=CAU",
+        "name": "Emma Brown",
+        "role": "Technician, Support",
+        "price": 28,
+        "rating": 4.6
+    },
+    {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmktWMn0ahf1-fx8Y7ChiOHkxeDe9A6nsgVW5F_TUyRByBfH3yZLiMFJAmFBLmPSr40zQ&usqp=CAU",
+        "name": "David Johnson",
+        "role": "Plumber, Expert",
+        "price": 35,
+        "rating": 4.9
+    },
+    {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVp-GszrtZHZ1eFa0Ef7xnJzTHcwFw0LmVQu4BpLL7NANj1hGPeXJWSZGTNcAJlXo09mw&usqp=CAU",
+        "name": "Olivia Green",
+        "role": "Plumber, Expert",
+        "price": 32,
+        "rating": 4.7
+    },
+    {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB5JGqi54_yXikjKonJwCY-y00fllU0IS_2-G20Zn52Wpga09nq63X_DfN1VTze6C07Uc&usqp=CAU",
+        "name": "James Williams",
+        "role": "Electrician, Specialist",
+        "price": 40,
+        "rating": 4.9
+    },
+    {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1BF1BJoHCjc0LZPha6aCCRf9tEA41GprtxavDkcow1S0aNt66BoifRBAocj3azxfcwJE&usqp=CAU",
+        "name": "Sophia Harris",
+        "role": "Electrician, Specialist",
+        "price": 38,
+        "rating": 4.8
+    },
+    {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWhGtk6exkQNMjdHVBH9RSghOQBZPy3MFoUHCsTDtSxJGI_49p80S1rrwPUh4MUQgyKVY&usqp=CAU",
+        "name": "Lucas Martinez",
+        "role": "Gardener, Landscaper",
+        "price": 25,
+        "rating": 4.6
+    },
+    {
+        "image": "https://media.istockphoto.com/id/612495778/photo/gardener-at-gardening.jpg?s=612x612&w=0&k=20&c=4Rs5qIlRaPvOcFJqsWzQ5-vLG-6OiIifeYF-eLF-5Jc=",
+        "name": "Ava Clark",
+        "role": "Gardener, Landscaper",
+        "price": 22,
+        "rating": 4.5
+    }
+]
