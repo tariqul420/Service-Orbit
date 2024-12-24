@@ -26,12 +26,12 @@ const BestProvider = ({ service }) => {
     return (
         <div
             data-aos="zoom-in-up"
-            className="shadow-lg border border-solid border-gray-300 p-3 rounded-xl dark:bg-gray-700 bg-white"
+            className="shadow-lg border border-solid border-gray-300 p-3 rounded-xl dark:bg-gray-700 bg-white overflow-hidden"
         >
             <img
                 src={image}
                 alt={name}
-                className="w-full rounded-md h-[250px] object-cover"
+                className="w-full rounded-md h-[250px] object-cover hover:scale-[1.1] transition-all duration-700"
             />
             <div className="flex items-center justify-between mt-3">
                 <div>

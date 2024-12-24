@@ -9,12 +9,12 @@ const ServiceCard = ({ service }) => {
     return (
         <div
             data-aos={location.pathname === '/' ? "zoom-in-down" : ""}
-            className="p-3 rounded-2xl border border-solid border-color-accent dark:border-color-accent-d flex gap-4 bg-white dark:bg-gray-700 shadow-lg max-h-[345px]">
-            <div className="w-[45%]">
-                <img className="rounded-lg h-full w-full object-cover" src={serviceImage} alt="" />
+            className="p-3 rounded-2xl border border-solid border-color-accent dark:border-color-accent-d flex gap-4 bg-white dark:bg-gray-700 shadow-lg overflow-hidden flex-col lg:flex-row">
+            <div className="lg:w-[45%]">
+                <img className="rounded-lg w-full object-cover hover:scale-[1.1] h-[320px] transition-all duration-700" src={serviceImage} alt="" />
             </div>
 
-            <div className="w-[55%]">
+            <div className="lg:w-[55%]">
                 <div className="flex items-center justify-between">
                     <h2 className="text-3xl font-semibold hover:text-color-accent dark:hover:text-color-accent-d cursor-pointer uppercase transition-all duration-300">{serviceName.substring(0, 12)}...</h2>
                     <p className="font-bold text-color-accent dark:text-color-accent-d">${servicePrice}</p>
