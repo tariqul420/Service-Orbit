@@ -154,7 +154,7 @@ const Home = () => {
                 className="bg-[url(https://i.ibb.co.com/59Yyn7H/background.png)] rounded-3xl mb-28">
                 <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 py-20 gap-20 lg:gap-0 px-8">
                     <div
-                        data-aos="fade-down"
+                        data-aos="fade-right"
                         className="flex items-center justify-center flex-col">
                         <p className="lg:text-[8vw] md:text-[20vw] text-[40vw] leading-none font-bold text-border font-mono" style={{ color: "transparent", WebkitTextStroke: "2px white" }}>
                             <CountUp
@@ -166,7 +166,7 @@ const Home = () => {
                     </div>
 
                     <div
-                        data-aos="fade-down"
+                        data-aos="flip-left"
                         className="flex items-center justify-center flex-col">
                         <p className="lg:text-[8vw] md:text-[20vw] text-[40vw] leading-none font-bold text-border font-mono" style={{ color: "transparent", WebkitTextStroke: "2px white" }}>
                             <CountUp
@@ -179,7 +179,7 @@ const Home = () => {
                     </div>
 
                     <div
-                        data-aos="fade-down"
+                        data-aos="flip-right"
                         className="flex items-center justify-center flex-col">
                         <p className="lg:text-[8vw] md:text-[20vw] text-[40vw] leading-none font-bold text-border font-mono" style={{ color: "transparent", WebkitTextStroke: "2px white" }}>
                             <CountUp
@@ -192,7 +192,7 @@ const Home = () => {
                     </div>
 
                     <div
-                        data-aos="fade-down"
+                        data-aos="fade-left"
                         className="flex items-center justify-center flex-col">
                         <p className="lg:text-[8vw] md:text-[20vw] text-[40vw] leading-none font-bold text-border font-mono" style={{ color: "transparent", WebkitTextStroke: "2px white" }}>
                             <CountUp

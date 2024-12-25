@@ -46,9 +46,9 @@ const Navbar = () => {
                         <h2 className="font-bold text-4xl font-Montserrat max-sm:hidden">
                             ServiceOrbit
                         </h2>
-                        <h2 className="font-bold text-4xl font-Montserrat sm:hidden">
-                            S.Orbit
-                        </h2>
+                        <img
+                            className="sm:hidden w-[3rem]"
+                            src="/service-logo.png" alt="Logo" />
                     </Link>
                 </div>
 

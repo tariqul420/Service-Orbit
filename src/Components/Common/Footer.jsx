@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="space-y-4">
                     <Link to='/'>
                         <div className="flex items-center gap-2">
-                            <img src="./service-logo.png" alt="Logo" className="w-12" />
+                            <img src="/service-logo.png" alt="Logo" className="w-12" />
                             <h2 className="font-extrabold text-2xl">Service Orbit</h2>
                         </div>
                     </Link>

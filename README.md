@@ -74,6 +74,7 @@
 - **lottie-react**
 - **prop-types**
 - **react**
+- **react-countup**
 - **react-dom**
 - **react-hook-form**
 - **react-hot-toast**
