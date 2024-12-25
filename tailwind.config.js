@@ -14,7 +14,7 @@ export default {
         'color-text-d': '#F4F4F9',
 
         'color-primary': '#F9FAFB',
-        'color-accent': '#4CAF50',
+        'color-accent': '#F15A28',
         'color-text': '#212121',
       },
       fontFamily: {

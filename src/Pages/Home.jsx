@@ -9,6 +9,7 @@ import BestProvider from "../Components/Home/BestProvider";
 import ToldCustomers from "../Components/Home/ToldCustomers";
 import Slider from "react-slick";
 import Aos from "aos";
+import PaymentCard from "../Components/Home/PaymentCard";
 
 const Home = () => {
 
@@ -106,6 +107,19 @@ const Home = () => {
                     {
                         data?.bestProvider.map((service, index) => <BestProvider key={index} service={service} />)
                     }
+                </div>
+            </div>
+
+            {/* Payment Card */}
+            <div className="mb-28 w-11/12 mx-auto">
+                <h2
+                    data-aos="fade-up"
+                    className="text-6xl font-bold text-center">Flexible Pricing</h2>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+                    <PaymentCard type="Starter" price="29" />
+                    <PaymentCard type="Professional" price="45" />
+                    <PaymentCard type="Enterprise" price="99" />
                 </div>
             </div>
 

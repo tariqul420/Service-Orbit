@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 nav a.active {
-  color: #4caf50;
+  color: #f15a28;
   position: relative;
   transition: all 0.3s ease;
 }
@@ -14,7 +14,7 @@ nav a.active {
 nav a.active::before {
   content: '';
   width: 100%;
-  background-color: #4caf50;
+  background-color: #f15a28;
   height: 2px;
   position: absolute;
   bottom: -2px;
@@ -28,7 +28,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #4caf50;
+  color: #f15a28;
   cursor: pointer;
 }
 
@@ -98,7 +98,7 @@ nav a.active:hover {
 }
 
 .pagination .active {
-  background-color: #4caf50;
+  background-color: #f15a28;
   color: white;
 }
 
