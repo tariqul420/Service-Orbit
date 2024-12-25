@@ -48,10 +48,10 @@ const Login = () => {
 
     return (
         <>
-            <section className="w-10/12 mx-auto h-auto flex flex-col-reverse lg:flex-row my-0 lg:my-12">
+            <section className="w-10/12 max-sm:w-full mx-auto h-auto flex flex-col-reverse lg:flex-row my-0 lg:my-12">
 
                 {/* Login Form */}
-                <div className="shadow-md backdrop-blur-3xl rounded-lg sm:py-6 sm:px-8 p-4 flex flex-col gap-5 flex-1">
+                <div className="shadow-md backdrop-blur-3xl rounded-lg sm:py-6 sm:px-8 p-4 flex flex-col gap-5 flex-1 max-sm:mb-12">
                     <form onSubmit={handleSubmit(onSubmit)} className="w-full flex flex-col gap-5">
                         <h3 className="text-[1.8rem] font-[700] text-center">
                             Login

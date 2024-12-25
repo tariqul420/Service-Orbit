@@ -39,6 +39,8 @@ const Banner = ({ banner }) => {
                     <SwiperSlide key={index}>
 
                         <div
+                            data-aos="flip-left"
+                            data-aos-duration="2000"
                             className="w-full sm:w-[80%] lg:w-full h-[473px] relative overflow-hidden group cursor-pointer rounded-md">
 
                             {/*  image  */}

@@ -30,7 +30,7 @@ const ForgotPassword = () => {
     }
 
     return (
-        <section className="w-10/12 mx-auto h-auto flex items-center my-12 justify-center gap-12">
+        <section className="w-10/12 max-sm:w-full mx-auto h-auto flex flex-col-reverse md:flex-row items-center my-12 justify-center gap-12">
             <div className="w-full sm:w-[40%] rounded-lg sm:py-6 sm:px-8 p-4 flex flex-col gap-5 shadow-md flex-1">
 
                 {/* Forgot Password Form */}

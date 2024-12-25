@@ -54,7 +54,8 @@ const Services = () => {
                             className='text-[1.3rem]  dark:group-hover:text-gray-200' /></span>
                 </div>
 
-                <h2 className="font-bold max-sm:text-5xl text-6xl text-center mt-12">All Services</h2>
+                <h2
+                    className="font-bold max-sm:text-5xl text-6xl text-center mt-12">All Services</h2>
 
 
                 {

@@ -66,7 +66,9 @@ const Home = () => {
 
             {/* Popular Services */}
             <div className="mb-28">
-                <h2 className="text-6xl font-bold text-center">Popular Services</h2>
+                <h2
+                    data-aos="fade-up"
+                    className="text-6xl font-bold text-center">Popular Services</h2>
 
                 {
                     data?.popularServices.length === 0 ? (
@@ -96,7 +98,9 @@ const Home = () => {
 
             {/* Best Service Provider */}
             <div className="mb-28">
-                <h2 className="text-6xl font-bold text-center">Best Service Provider</h2>
+                <h2
+                    data-aos="fade-up"
+                    className="text-6xl font-bold text-center">Best Service Provider</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
                     {
@@ -107,7 +111,9 @@ const Home = () => {
 
             {/* Our Stories As Told By Customers */}
             <div className="mb-28">
-                <h2 className="text-6xl font-bold text-center">Our Stories As Told By <br className="max-sm:hidden" /> Customers</h2>
+                <h2
+                    data-aos="fade-up"
+                    className="text-6xl font-bold text-center">Our Stories As Told By <br className="max-sm:hidden" /> Customers</h2>
 
                 <div className="mt-12 flex flex-col gap-8">
                     <Slider {...settings}>
