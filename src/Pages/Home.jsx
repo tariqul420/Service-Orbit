@@ -151,7 +151,7 @@ const Home = () => {
             {/* Success */}
             <div
                 data-aos="fade-up"
-                className="bg-[url(https://i.ibb.co.com/59Yyn7H/background.png)] rounded-3xl mb-28">
+                className="bg-[url(https://i.ibb.co.com/59Yyn7H/background.png)] bg-cover bg-no-repeat rounded-3xl mb-28">
                 <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 py-20 gap-20 lg:gap-0 px-8">
                     <div
                         data-aos="fade-right"
