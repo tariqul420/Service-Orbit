@@ -18,7 +18,7 @@ export default {
         'color-text': '#212121',
       },
       fontFamily: {
-        "Montserrat ": ["Montserrat", "sans-serif"],
+        "Montserrat": ["Montserrat", "serif"],
       }
     },
   },

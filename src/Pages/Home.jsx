@@ -46,6 +46,31 @@ const Home = () => {
         slidesToScroll: 1,
         centerMode: true,
         centerPadding: "0px",
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     }
 
     useEffect(() => {
@@ -61,7 +86,7 @@ const Home = () => {
     if (isLoading) return <LoadingSpinner />
 
     return (
-        <section>
+        <section className="overflow-x-hidden">
             {/* Banner Slider */}
             <Banner banner={data?.banner} />
 
@@ -69,7 +94,7 @@ const Home = () => {
             <div className="mb-28">
                 <h2
                     data-aos="fade-up"
-                    className="text-6xl font-bold text-center">Popular Services</h2>
+                    className="text-6xl font-bold text-center max-sm:text-4xl">Popular Services</h2>
 
                 {
                     data?.popularServices.length === 0 ? (
@@ -101,7 +126,7 @@ const Home = () => {
             <div className="mb-28">
                 <h2
                     data-aos="fade-up"
-                    className="text-6xl font-bold text-center">Best Service Provider</h2>
+                    className="text-6xl font-bold text-center max-sm:text-4xl">Best Service Provider</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
                     {
@@ -114,7 +139,7 @@ const Home = () => {
             <div className="mb-28 w-11/12 mx-auto">
                 <h2
                     data-aos="fade-up"
-                    className="text-6xl font-bold text-center">Flexible Pricing</h2>
+                    className="text-6xl font-bold text-center max-sm:text-4xl">Flexible Pricing</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
                     <PaymentCard type="Starter" price="29" />
@@ -123,11 +148,15 @@ const Home = () => {
                 </div>
             </div>
 
+            <div className="bg-[url(https://i.ibb.co.com/59Yyn7H/background.png)]">
+
+            </div>
+
             {/* Our Stories As Told By Customers */}
             <div className="mb-28">
                 <h2
                     data-aos="fade-up"
-                    className="text-6xl font-bold text-center">Our Stories As Told By <br className="max-sm:hidden" /> Customers</h2>
+                    className="text-6xl font-bold text-center max-sm:text-3xl">Our Stories As Told By <br className="max-sm:hidden" /> Customers</h2>
 
                 <div className="mt-12 flex flex-col gap-8">
                     <Slider {...settings}>
