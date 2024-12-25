@@ -10,7 +10,7 @@ import ToldCustomers from "../Components/Home/ToldCustomers";
 import Slider from "react-slick";
 import Aos from "aos";
 import PaymentCard from "../Components/Home/PaymentCard";
-
+import CountUp from "react-countup";
 const Home = () => {
 
     useEffect(() => {
@@ -148,8 +148,62 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="bg-[url(https://i.ibb.co.com/59Yyn7H/background.png)]">
+            {/* Success */}
+            <div
+                data-aos="fade-up"
+                className="bg-[url(https://i.ibb.co.com/59Yyn7H/background.png)] rounded-3xl mb-28">
+                <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 py-20 gap-20 lg:gap-0 px-8">
+                    <div
+                        data-aos="fade-down"
+                        className="flex items-center justify-center flex-col">
+                        <p className="lg:text-[8vw] md:text-[20vw] text-[40vw] leading-none font-bold text-border font-mono" style={{ color: "transparent", WebkitTextStroke: "2px white" }}>
+                            <CountUp
+                                start={0}
+                                end={52}
+                                duration={2.5}
+                            />K</p>
+                        <p className="text-white font-bold text-5xl">Customers</p>
+                    </div>
 
+                    <div
+                        data-aos="fade-down"
+                        className="flex items-center justify-center flex-col">
+                        <p className="lg:text-[8vw] md:text-[20vw] text-[40vw] leading-none font-bold text-border font-mono" style={{ color: "transparent", WebkitTextStroke: "2px white" }}>
+                            <CountUp
+                                start={0}
+                                end={42}
+                                duration={2.5}
+                            />
+                            K</p>
+                        <p className="text-white font-bold text-5xl">Reviews</p>
+                    </div>
+
+                    <div
+                        data-aos="fade-down"
+                        className="flex items-center justify-center flex-col">
+                        <p className="lg:text-[8vw] md:text-[20vw] text-[40vw] leading-none font-bold text-border font-mono" style={{ color: "transparent", WebkitTextStroke: "2px white" }}>
+                            <CountUp
+                                start={0}
+                                end={2}
+                                duration={2.5}
+                            />
+                            M</p>
+                        <p className="text-white font-bold text-5xl">Task Done</p>
+                    </div>
+
+                    <div
+                        data-aos="fade-down"
+                        className="flex items-center justify-center flex-col">
+                        <p className="lg:text-[8vw] md:text-[20vw] text-[40vw] leading-none font-bold text-border font-mono" style={{ color: "transparent", WebkitTextStroke: "2px white" }}>
+                            <CountUp
+                                start={0}
+                                end={3}
+                                duration={2.5}
+                            />
+                            K</p>
+                        <p className="text-white font-bold text-5xl">Jobs</p>
+                    </div>
+                </div>
             </div>
 
             {/* Our Stories As Told By Customers */}
