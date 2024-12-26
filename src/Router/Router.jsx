@@ -14,6 +14,7 @@ import PrivateRouter from "./PrivateRouter";
 import ServiceToDo from "../Pages/ServiceToDo";
 import ServiceDetails from "../Pages/ServiceDetails";
 import UpdateService from "../Components/ManageService/UpdateService";
+import ContactUs from "../Pages/ContactUs";
 
 const router = createBrowserRouter([
     {
@@ -83,6 +84,10 @@ const router = createBrowserRouter([
             {
                 path: '/update-service/:id',
                 element: <UpdateService />
+            },
+            {
+                path: '/contact-us',
+                element: <ContactUs />
             }
         ]
     }
