@@ -89,7 +89,7 @@ const ManageService = () => {
                         <p className="text-[0.9rem] dark:text-gray-300 text-gray-600">Whoops ... this information is not available for a moment</p>
                     </div>
                 ) : (
-                    <section className='container px-4 mx-auto pt-12'>
+                    <section className='container px-4 mx-auto my-12'>
                         <div className='flex items-center gap-x-3'>
                             <h2 className='text-lg font-medium'>My Services</h2>
 

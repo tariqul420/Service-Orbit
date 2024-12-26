@@ -77,7 +77,7 @@ const Navbar = () => {
                                         <div
                                             className={`${dashboardOpen
                                                 ? "translate-y-0 opacity-100 z-[1000]"
-                                                : "translate-y-[10px] opacity-0 z-[-1]"
+                                                : "translate-y-[10px] opacity-0 z-[-1] hidden"
                                                 } bg-white w-max rounded-md shadow-md absolute top-[45px] right-0 p-[10px] flex flex-col transition-all duration-300 gap-[5px] dark:bg-gray-700`}
                                         >
                                             <NavLink to="/add-service" className="navBarLink">
