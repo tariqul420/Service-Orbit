@@ -29,7 +29,7 @@ const Login = () => {
             .then(() => {
                 setEmail('')
                 toast.success('Login Successfully')
-                navigate(location?.state ? location?.state : '/')
+                navigate(location?.state ? location?.state?.from : '/')
             })
             .catch((error) => {
                 if (error.code === "auth/invalid-credential") {
@@ -41,7 +41,7 @@ const Login = () => {
     const handelGoogle = () => {
         socialAuth(googleProvider)
             .then(() => {
-                navigate(location?.state ? location?.state : '/')
+                navigate(location?.state ? location?.state?.from : '/')
                 toast.success('Login Successfully.')
             })
     }

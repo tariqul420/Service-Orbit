@@ -28,7 +28,7 @@ const PaymentCard = ({ type, price }) => {
                 <p className="flex gap-1 items-center text-lg"><IoCheckmarkCircleOutline /> QR Code</p>
                 <p className="flex gap-1 items-center text-lg"><IoCheckmarkCircleOutline /> Invoice</p>
 
-                <button className="px-5 py-2 bg-color-accent dark:bg-color-accent-d flex items-center text-2xl font-semibold text-white rounded-md">
+                <button className="px-2 py-1 bg-color-accent dark:bg-color-accent-d flex items-center text-2xl font-semibold text-white rounded-md">
                     Get Started
                     <MdArrowOutward />
                 </button>

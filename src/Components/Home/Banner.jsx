@@ -10,7 +10,7 @@ const Banner = ({ banner }) => {
 
 
     return (
-        <div className="swiper mySwiper w-11/12 mx-auto mb-28">
+        <div className="swiper mySwiper mx-auto mb-28">
             <Swiper
                 modules={[Autoplay, Pagination]}
                 loop={true}
@@ -30,7 +30,7 @@ const Banner = ({ banner }) => {
                         spaceBetween: 20,
                     },
                     1024: {
-                        slidesPerView: 3,
+                        slidesPerView: 4,
                         spaceBetween: 30,
                     },
                 }}
@@ -41,7 +41,7 @@ const Banner = ({ banner }) => {
                         <div
                             data-aos="flip-left"
                             data-aos-duration="2000"
-                            className="w-full sm:w-[80%] lg:w-full h-[473px] relative overflow-hidden group cursor-pointer rounded-md">
+                            className="w-full sm:w-[80%] lg:w-full h-[400px] relative overflow-hidden group cursor-pointer rounded-md">
 
                             {/*  image  */}
                             <img

@@ -1,11 +1,12 @@
 import useAuth from "../Hook/useAuth";
 import PropTypes from "prop-types";
-import { Navigate, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import LoadingSpinner from "../Components/Common/LoadingSpinner";
 
 const PrivateRouter = ({ children }) => {
     const { user, loading } = useAuth()
     const location = useLocation()
+    const navigate = useNavigate()
 
     if (loading) {
         return (
@@ -25,7 +26,7 @@ const PrivateRouter = ({ children }) => {
         return children
     }
 
-    return <Navigate state={location.pathname} to='/login' />
+    return navigate('/login', { state: { from: location.pathname } });
 };
 
 PrivateRouter.propTypes = {
