@@ -46,7 +46,7 @@ const Services = () => {
                     <input
                         onChange={(e) => setSearch(e.target.value)}
                         type='text'
-                        placeholder='Search movie'
+                        placeholder='Search Services (Title)'
                         className='border border-[#e5eaf2] py-3 pl-4 pr-[65px] outline-none w-full rounded-md dark:bg-gray-700 font-semibold shadow-lg' />
 
                     <span
