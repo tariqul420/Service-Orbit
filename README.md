@@ -121,7 +121,7 @@
    ```bash
    code .
    ```
-5. Add the .env file in the root directory and include the following environment variables:
+5. Add the `.env` file in the root directory and include the following environment variables:
    ```bash
    VITE_API_KEY=YOUR_VITE_API_KEY
    VITE_AUTH_DOMAIN=YOUR_VITE_AUTH_DOMAIN
@@ -165,7 +165,7 @@
    ```bash
    code .
    ```
-5. Add the .env file in the root directory and include the following environment variables:
+5. Add the `.env` file in the root directory and include the following environment variables:
    ```bash
    DATABASE_USERNAME=YOUR_DATABASE_USERNAME
    DATABASE_PASSWORD=YOUR_DATABASE_PASSWORD
