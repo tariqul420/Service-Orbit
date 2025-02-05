@@ -172,3 +172,23 @@
    ACCESS_TOKEN_SECRET=YOUR_ACCESS_TOKEN_SECRET
    ```
    > **Note:** Replace the `index.js` file's `your_mongo_connection_string` and the `.env` file's `YOUR_DATABASE_USERNAME`, along with other placeholders, with actual values.
+
+## 🧑‍💻 Authors
+
+- Tariqul Islam (Lead Developer)
+- Lead Developer & Maintainer
+- Connect with me on [_GitHub_](https://github.com/tariqul420) & [_Facebook_](https://www.facebook.com/tariqul.islam.fb)
+
+## 📸 Screenshots
+
+### 1. Home Page
+
+![Home Page](https://github.com/tariqul420/Service-Orbit/blob/main/src/assets/Screenshot/home_page.png)
+
+### 2. Services Page
+
+![Services Page](https://github.com/tariqul420/Service-Orbit/blob/main/src/assets/Screenshot/services_page.png)
+
+### 3. Contact Us Page
+
+![Contact Us Page](https://github.com/tariqul420/Service-Orbit/blob/main/src/assets/Screenshot/contact-us.png)
