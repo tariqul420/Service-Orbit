@@ -15,7 +15,7 @@ const PaymentCard = ({ type, price }) => {
                 </p>
             </div>
 
-            <div className="space-y-2 p-8 bg-[#FFFFFF] dark:bg-gray-700/70 rounded-b-3xl border-b border-x border-solid border-gray-300 group-hover:bg-[#FDEEEE] dark:group-hover:bg-[#052c4e] transition-all duration-300 ease-in-out">
+            <div className="space-y-1 p-8 bg-[#FFFFFF] dark:bg-gray-700/70 rounded-b-3xl border-b border-x border-solid border-gray-300 group-hover:bg-[#FDEEEE] dark:group-hover:bg-[#052c4e] transition-all duration-300 ease-in-out">
                 <p className="flex gap-1 items-center"><IoCheckmarkCircleOutline /> Booking</p>
                 <p className="flex gap-1 items-center"><IoCheckmarkCircleOutline /> Own Cover Image on Provider</p>
                 <p className="flex gap-1 items-center"><IoCheckmarkCircleOutline /> 5 Project At least</p>

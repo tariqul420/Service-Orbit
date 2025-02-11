@@ -12,7 +12,7 @@ const Services = () => {
     const [currentItems, setCurrentItems] = useState(null)
     const [pageCount, setPageCount] = useState(0)
     const [itemOffset, setItemOffset] = useState(0)
-    const itemsPerPage = 8
+    const itemsPerPage = 12
 
     useEffect(() => {
         document.title = 'Services || Service Orbit'

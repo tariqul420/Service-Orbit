@@ -14,9 +14,9 @@ const BestProvider = ({ service }) => {
         for (let i = 1; i <= 5; i++) {
             stars.push(
                 i <= rating ? (
-                    <AiFillStar size={22} key={i} className="text-yellow-500" />
+                    <AiFillStar size={16} key={i} className="text-yellow-500" />
                 ) : (
-                    <AiOutlineStar size={22} key={i} className="text-gray-400" />
+                    <AiOutlineStar size={16} key={i} className="text-gray-400" />
                 )
             );
         }
@@ -31,29 +31,27 @@ const BestProvider = ({ service }) => {
             <img
                 src={image}
                 alt={name}
-                className="w-full rounded-md h-[250px] object-cover hover:scale-[1.1] transition-all duration-700"
+                className="w-full rounded-md h-[180px] object-cover hover:scale-[1.1] transition-all duration-700"
             />
-            <div className="flex items-center justify-between mt-3">
-                <div>
-                    <h3 className="font-medium text-xl uppercase">{name}</h3>
-                    <p className="text-lg">{role}</p>
-                </div>
-                <div>
-                    <p>
-                        <span className="text-3xl font-medium">${price}</span>
-                        <span className="text-2xl"> /hr</span>
-                    </p>
-                </div>
+            <h3 className="font-medium mt-2 text-xl uppercase">{name}</h3>
+            <p className="text-lg">{role}</p>
+
+            <div className="flex items-center">
+                {Stars()}
+                <span>({price})</span>
             </div>
-            <div className="mt-4 flex items-center justify-between">
-                <div className="flex mt-2 items-center">
-                    {Stars()}
-                    <span className="text-xl">({price})</span>
-                </div>
+
+            <div className="flex items-center justify-between">
+
+                <p>
+                    <span className="text-xl font-medium">${price}</span>
+                    <span className="text-xl"> /hr</span>
+                </p>
+
                 <div>
                     <button
                         onClick={handelBookNow}
-                        className="flex gap-1 items-center font-semibold text-2xl border-b dark:text-color-accent-d text-color-accent dark:border-color-accent-d border-color-accent">Book Now <GoArrowUpRight /></button>
+                        className="flex gap-1 items-center font-semibold text-xl border-b dark:text-color-accent-d text-color-accent dark:border-color-accent-d border-color-accent">Book Now <GoArrowUpRight /></button>
                 </div>
             </div>
         </div>

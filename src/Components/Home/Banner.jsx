@@ -1,10 +1,10 @@
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const Banner = ({ banner }) => {
 

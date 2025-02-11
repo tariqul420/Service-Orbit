@@ -20,20 +20,20 @@ const ToldCustomers = ({ review: customerReview }) => {
 
     return (
         <div data-aos="fade-right" className="flex border border-solid border-color-accent dark:border-white dark:bg-gray-700 p-4 rounded-lg shadow-md flex-col lg:flex-row items-center justify-center">
-            <div className="lg:w-[25%]">
-                <img className="w-[250px] h-[250px] rounded-full object-cover" src={image} alt="" />
+            <div className="lg:w-[20%]">
+                <img className="w-[200px] h-[200px] rounded-full object-cover" src={image} alt="" />
             </div>
             <div className="lg:w-[75%]">
                 <div className="flex mt-2 items-center justify-center lg:justify-start">
                     {Stars()}
                     <span className="text-xl">({rating})</span>
                 </div>
-                <p className="text-xl font-medium mt-2 text-center lg:text-start">
+                <p className="font-medium mt-2 text-center lg:text-start">
                     &quot; {review} &quot;
                 </p>
                 <p className="mt-6 text-center lg:text-start">
-                    <span className="text-3xl font-medium uppercase">{name},</span>
-                    <span className="text-xl ml-2">{profession}</span></p>
+                    <span className="text-xl font-medium uppercase">{name},</span>
+                    <span className="text-lg ml-2">{profession}</span></p>
             </div>
         </div>
     );

@@ -95,7 +95,6 @@ const Home = () => {
                 <h2
                     data-aos="fade-up"
                     className="text-5xl font-bold text-center max-sm:text-4xl">Popular Services</h2>
-
                 {
                     data?.popularServices.length === 0 ? (
                         <div
@@ -107,7 +106,7 @@ const Home = () => {
                             <p className="text-[0.9rem] dark:text-gray-300 text-gray-600">Whoops ... this information is not available for a moment</p>
                         </div>
                     ) : (
-                        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-20">
+                        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-20">
                             {
                                 data?.popularServices.map(service => <ServiceCard key={service?._id} service={service} />)
                             }
@@ -116,7 +115,7 @@ const Home = () => {
                 }
 
                 <Link to='/services'>
-                    <button className="border-2 px-10 py-2 rounded-full border-solid border-color-accent dark:border-color-accent-d font-semibold text-lg text-color-primary bg-color-accent dark:bg-color-accent-d mt-12 block mx-auto">
+                    <button className="border-2 px-10 py-1 rounded-full border-solid border-color-accent dark:border-color-accent-d font-semibold text-lg text-color-primary bg-color-accent dark:bg-color-accent-d mt-12 block mx-auto">
                         Show all
                     </button>
                 </Link>
@@ -128,7 +127,7 @@ const Home = () => {
                     data-aos="fade-up"
                     className="text-5xl font-bold text-center max-sm:text-4xl">Best Service Provider</h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-12">
                     {
                         data?.bestProvider.map((service, index) => <BestProvider key={index} service={service} />)
                     }
