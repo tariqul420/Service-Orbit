@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { GrCompliance } from "react-icons/gr";
 import { PiShareNetworkFill } from "react-icons/pi";
-import useAxiosSecure from "../Hook/useAxiosSecure";
-import useAuth from "../Hook/useAuth";
+import useAxiosSecure from "../../Hook/useAxiosSecure";
+import useAuth from "../../Hook/useAuth";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import LoadingSpinner from "../Components/Common/LoadingSpinner";
+import LoadingSpinner from "../../Components/Common/LoadingSpinner";
 import toast from "react-hot-toast";
 
 const ServiceToDo = () => {

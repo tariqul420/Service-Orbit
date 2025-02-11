@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { useEffect } from "react";
-import useAxiosSecure from "../Hook/useAxiosSecure";
-import useAuth from "../Hook/useAuth";
-import LoadingSpinner from "../Components/Common/LoadingSpinner";
+import useAxiosSecure from "../../Hook/useAxiosSecure";
+import useAuth from "../../Hook/useAuth";
+import LoadingSpinner from "../../Components/Common/LoadingSpinner";
 
 const BookedServices = () => {
     const { user } = useAuth()

@@ -1,14 +1,14 @@
-import { Link, NavLink } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
-import AuthBtn from "./AuthBtn";
-import useAuth from "../../../Hook/useAuth";
-import Profile from "./Profile";
-import ThemeToggle from "./ThemeToggle";
-import { IoIosArrowUp } from "react-icons/io";
 import { FaBookmark } from "react-icons/fa";
+import { IoIosArrowUp } from "react-icons/io";
 import { MdManageAccounts, MdMedicalServices } from "react-icons/md";
 import { RiUserAddFill } from "react-icons/ri";
+import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../../Hook/useAuth";
+import AuthBtn from "./AuthBtn";
+import Profile from "./Profile";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
     const { user } = useAuth();
@@ -63,6 +63,9 @@ const Navbar = () => {
                             </li>
                             <li className="navBarLink">
                                 <NavLink to="/contact-us">Contact Us</NavLink>
+                            </li>
+                            <li className="navBarLink">
+                                <NavLink to="/about-us">About Us</NavLink>
                             </li>
                             {user && (
                                 <li>

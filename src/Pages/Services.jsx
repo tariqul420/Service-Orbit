@@ -54,10 +54,6 @@ const Services = () => {
                             className='text-[1.3rem]  dark:group-hover:text-gray-200' /></span>
                 </div>
 
-                <h2
-                    className="font-bold max-sm:text-5xl text-6xl text-center mt-12">All Services</h2>
-
-
                 {
                     services.length === 0 ? (
                         <div
@@ -69,7 +65,7 @@ const Services = () => {
                             <p className="text-[0.9rem] dark:text-gray-300 text-gray-600">Whoops ... this information is not available for a moment</p>
                         </div>
                     ) : (
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20">
+                        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2 mt-20">
                             {
                                 currentItems.map(service => <ServiceCard key={service._id} service={service} />)
                             }

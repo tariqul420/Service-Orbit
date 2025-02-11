@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 import { MdError } from "react-icons/md";
-import useAuth from "../Hook/useAuth";
+import useAuth from "../../Hook/useAuth";
 import { useMutation } from "@tanstack/react-query";
-import useAxiosSecure from "../Hook/useAxiosSecure";
+import useAxiosSecure from "../../Hook/useAxiosSecure";
 import toast from "react-hot-toast";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";

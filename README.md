@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://service-orbit.web.app" target="_blank">
-    <img src="https://i.ibb.co.com/SVm55YV/service-logo.png" width="250px" alt="Service Orbit"/> 
+    <img src="https://i.ibb.co.com/SVm55YV/service-logo.png" width="150px" alt="Service Orbit"/> 
   </a>
   <h1>Service Orbit</h1>
 </div>

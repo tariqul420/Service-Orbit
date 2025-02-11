@@ -1,16 +1,16 @@
-import { useEffect } from "react";
-import Banner from "../Components/Home/Banner";
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
-import LoadingSpinner from "../Components/Common/LoadingSpinner";
-import { Link } from "react-router-dom";
-import ServiceCard from "../Components/Common/ServiceCard";
-import BestProvider from "../Components/Home/BestProvider";
-import ToldCustomers from "../Components/Home/ToldCustomers";
-import Slider from "react-slick";
 import Aos from "aos";
-import PaymentCard from "../Components/Home/PaymentCard";
+import axios from "axios";
+import { useEffect } from "react";
 import CountUp from "react-countup";
+import { Link } from "react-router-dom";
+import Slider from "react-slick";
+import LoadingSpinner from "../Components/Common/LoadingSpinner";
+import ServiceCard from "../Components/Common/ServiceCard";
+import Banner from "../Components/Home/Banner";
+import BestProvider from "../Components/Home/BestProvider";
+import PaymentCard from "../Components/Home/PaymentCard";
+import ToldCustomers from "../Components/Home/ToldCustomers";
 const Home = () => {
 
     useEffect(() => {
@@ -94,7 +94,7 @@ const Home = () => {
             <div className="mb-28">
                 <h2
                     data-aos="fade-up"
-                    className="text-6xl font-bold text-center max-sm:text-4xl">Popular Services</h2>
+                    className="text-5xl font-bold text-center max-sm:text-4xl">Popular Services</h2>
 
                 {
                     data?.popularServices.length === 0 ? (
@@ -107,7 +107,7 @@ const Home = () => {
                             <p className="text-[0.9rem] dark:text-gray-300 text-gray-600">Whoops ... this information is not available for a moment</p>
                         </div>
                     ) : (
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20">
+                        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-20">
                             {
                                 data?.popularServices.map(service => <ServiceCard key={service?._id} service={service} />)
                             }
@@ -126,7 +126,7 @@ const Home = () => {
             <div className="mb-28">
                 <h2
                     data-aos="fade-up"
-                    className="text-6xl font-bold text-center max-sm:text-4xl">Best Service Provider</h2>
+                    className="text-5xl font-bold text-center max-sm:text-4xl">Best Service Provider</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
                     {
@@ -139,7 +139,7 @@ const Home = () => {
             <div className="mb-28 w-11/12 mx-auto">
                 <h2
                     data-aos="fade-up"
-                    className="text-6xl font-bold text-center max-sm:text-4xl">Flexible Pricing</h2>
+                    className="text-5xl font-bold text-center max-sm:text-4xl">Flexible Pricing</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
                     <PaymentCard type="Starter" price="29" />
@@ -210,7 +210,7 @@ const Home = () => {
             <div className="mb-28">
                 <h2
                     data-aos="fade-up"
-                    className="text-6xl font-bold text-center max-sm:text-3xl">Our Stories As Told By <br className="max-sm:hidden" /> Customers</h2>
+                    className="text-5xl font-bold text-center max-sm:text-4xl">Our Stories As Told By <br className="max-sm:hidden" /> Customers</h2>
 
                 <div className="mt-12 flex flex-col gap-8">
                     <Slider {...settings}>
