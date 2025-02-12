@@ -11,6 +11,7 @@ import Banner from "../Components/Home/Banner";
 import BestProvider from "../Components/Home/BestProvider";
 import PaymentCard from "../Components/Home/PaymentCard";
 import ToldCustomers from "../Components/Home/ToldCustomers";
+import FAQ from "../Components/Home/FAQ";
 const Home = () => {
 
     useEffect(() => {
@@ -203,6 +204,11 @@ const Home = () => {
                         <p className="text-white font-bold text-5xl">Jobs</p>
                     </div>
                 </div>
+            </div>
+
+            {/* FAQ section */}
+            <div className="mb-28">
+                <FAQ />
             </div>
 
             {/* Our Stories As Told By Customers */}

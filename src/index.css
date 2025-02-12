@@ -1,5 +1,6 @@
 /* Font Family */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "keep-react/css";
 
 @tailwind base;
 @tailwind components;
