@@ -40,5 +40,19 @@
         "role": "Electrician, Specialist",
         "price": 40,
         "rating": 4.9
+    },
+    {
+        "image": "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Tariqul Islam",
+        "role": "Web Developer",
+        "price": 90,
+        "rating": 4.9
+    },
+    {
+        "image": "https://images.pexels.com/photos/30623341/pexels-photo-30623341/free-photo-of-hand-holding-cryptocurrency-coins-with-graph-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "name": "Shakibul Hassan",
+        "role": "Digital Marketer",
+        "price": 80,
+        "rating": 4.9
     }
 ]

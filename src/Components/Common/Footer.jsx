@@ -47,8 +47,12 @@ const Footer = () => {
                     <h2 className="font-semibold text-2xl">Quick Link</h2>
                     <p>Privacy Policy</p>
                     <p>Terms Of Use</p>
-                    <p>FAQ</p>
-                    <p>Contact</p>
+                    <Link to={'/about-us'} className="block">
+                        About Us
+                    </Link>
+                    <Link to={'/contact-us'} className="block">
+                        Contact
+                    </Link>
                 </div>
                 <div className="space-y-4">
                     <h2 className="font-semibold text-2xl">Download App</h2>
