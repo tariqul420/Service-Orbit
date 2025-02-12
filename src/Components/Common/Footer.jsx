@@ -53,6 +53,9 @@ const Footer = () => {
                     <Link to={'/contact-us'} className="block">
                         Contact
                     </Link>
+                    <Link to={'/about-us'} className="block">
+                        About Us
+                    </Link>
                 </div>
                 <div className="space-y-4">
                     <h2 className="font-semibold text-2xl">Download App</h2>
