@@ -39,9 +39,14 @@ const Footer = () => {
                 </div>
                 <div className="space-y-4">
                     <h2 className="font-semibold text-2xl">Support</h2>
-                    <p><Link to='/'>Home</Link></p>
-                    <p><Link to='/login'>Login</Link>/<Link to='/register'>Register</Link></p>
-                    <p><Link to='/services'>Services</Link></p>
+                    <Link className="block" to='/'>Home</Link>
+                    <div>
+                        <Link to='/login'>Login</Link>/<Link to='/register'>Register</Link>
+                    </div>
+                    <Link to='/services' className="block">Services</Link>
+                    <Link to={'/about-us'} className="block">
+                        About Us
+                    </Link>
                 </div>
                 <div className="space-y-4">
                     <h2 className="font-semibold text-2xl">Quick Link</h2>
@@ -52,9 +57,6 @@ const Footer = () => {
                     </Link>
                     <Link to={'/contact-us'} className="block">
                         Contact
-                    </Link>
-                    <Link to={'/about-us'} className="block">
-                        About Us
                     </Link>
                 </div>
                 <div className="space-y-4">
