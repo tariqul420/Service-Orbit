@@ -10,9 +10,10 @@ const config = {
   theme: {
     extend: {
       colors: {
-        'color-primary-d': '#1F2937',
+        'color-primary-d': '#09101a',
         'color-accent-d': '#FF9800',
         'color-text-d': '#F4F4F9',
+        'color-dark-lite': '#121b27',
 
         'color-primary': '#F9FAFB',
         'color-accent': '#F15A28',

@@ -64,7 +64,7 @@ const ServiceDetails = () => {
     return (
         <>
             <section>
-                <div className="dark:bg-gray-700 bg-white shadow-md p-8 rounded-xl my-12 flex flex-col gap-4 lg:flex-row">
+                <div className="dark:bg-color-dark-lite bg-white shadow-md p-8 rounded-xl my-12 flex flex-col gap-4 lg:flex-row">
                     <div className="lg:w-[40%]">
                         <img className="rounded-lg h-full w-full" src={serviceImage} alt={serviceName} />
                     </div>

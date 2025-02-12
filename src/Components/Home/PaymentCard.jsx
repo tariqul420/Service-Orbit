@@ -6,7 +6,7 @@ const PaymentCard = ({ type, price }) => {
         <div
             data-aos="flip-left"
             className="group mt-8">
-            <div className="p-8 bg-[#F4FAFF] dark:bg-gray-700/50 rounded-t-3xl border-t border-x border-solid border-gray-300 group-hover:bg-[#052642] group-hover:text-white transition-all duration-300 ease-in-out">
+            <div className="p-8 bg-[#F4FAFF] dark:bg-color-dark-lite/50 rounded-t-3xl border-t border-x border-solid border-gray-300 group-hover:bg-[#052642] group-hover:text-white transition-all duration-300 ease-in-out">
                 <button className="px-6 rounded-md py-0 bg-white text-xl text-[#F15A28]">{type}</button>
                 <p className="text-lg mt-4 text-justify">Get started with our Starter Sanitizing Package to ensure your space is clean and safe.</p>
                 <p className="mt-4">
@@ -15,7 +15,7 @@ const PaymentCard = ({ type, price }) => {
                 </p>
             </div>
 
-            <div className="space-y-1 p-8 bg-[#FFFFFF] dark:bg-gray-700/70 rounded-b-3xl border-b border-x border-solid border-gray-300 group-hover:bg-[#FDEEEE] dark:group-hover:bg-[#052c4e] transition-all duration-300 ease-in-out">
+            <div className="space-y-1 p-8 bg-[#FFFFFF] dark:bg-color-dark-lite/70 rounded-b-3xl border-b border-x border-solid border-gray-300 group-hover:bg-[#FDEEEE] dark:group-hover:bg-[#052c4e] transition-all duration-300 ease-in-out">
                 <p className="flex gap-1 items-center"><IoCheckmarkCircleOutline /> Booking</p>
                 <p className="flex gap-1 items-center"><IoCheckmarkCircleOutline /> Own Cover Image on Provider</p>
                 <p className="flex gap-1 items-center"><IoCheckmarkCircleOutline /> 5 Project At least</p>

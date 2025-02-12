@@ -10,7 +10,7 @@ const ServiceCard = ({ service }) => {
         <Link to={`/service/${_id}`}>
             <div
                 data-aos={location.pathname === '/' ? "zoom-in-down" : ""}
-                className="p-2 rounded-xl border border-solid border-color-accent dark:border-color-accent-d flex flex-col gap-4 bg-white dark:bg-gray-700 shadow-lg overflow-hidden">
+                className="p-2 rounded-xl border border-solid border-color-accent dark:border-color-accent-d flex flex-col gap-4 bg-white dark:bg-color-dark-lite shadow-lg overflow-hidden">
                 <div>
                     <img className="rounded-lg w-full object-cover hover:scale-[1.1] h-[180px] transition-all duration-700" src={serviceImage} alt="" />
                 </div>

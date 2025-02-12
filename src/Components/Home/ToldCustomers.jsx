@@ -19,7 +19,7 @@ const ToldCustomers = ({ review: customerReview }) => {
     };
 
     return (
-        <div data-aos="fade-right" className="flex border border-solid border-color-accent dark:border-white dark:bg-gray-700 p-4 rounded-lg shadow-md flex-col lg:flex-row items-center justify-center">
+        <div data-aos="fade-right" className="flex border border-solid border-color-accent dark:border-white dark:bg-color-dark-lite p-4 rounded-lg shadow-md flex-col lg:flex-row items-center justify-center">
             <div className="lg:w-[20%]">
                 <img className="w-[200px] h-[200px] rounded-full object-cover" src={image} alt="" />
             </div>

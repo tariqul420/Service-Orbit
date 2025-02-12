@@ -59,7 +59,7 @@ const BookModal = ({ modalOpen, setModalOpen, serviceDetails }) => {
         <div
             className={`${modalOpen ? " scale-[1] opacity-100" : " scale-[0] opacity-0"
                 } w-full h-screen fixed top-0 left-0 z-50 bg-[#000000c2] flex items-center justify-center transition-all duration-300 `}>
-            <div className="w-[90%] lg:w-[50%] bg-[#ffffff] dark:bg-gray-700 rounded-lg p-4 max-h-[80vh] overflow-y-auto">
+            <div className="w-[90%] lg:w-[50%] bg-[#ffffff] dark:bg-color-dark-lite rounded-lg p-4 max-h-[80vh] overflow-y-auto">
                 <div className="w-full flex items-end justify-end">
                     <RxCross1
                         className="p-2 text-[2.5rem] hover:bg-[#e7e7e7] dark:hover:bg-gray-600 rounded-full transition-all duration-300 cursor-pointer"

@@ -49,7 +49,7 @@ const ServiceToDo = () => {
             {
                 serviceToDo.length === 0 ? (
                     <div
-                        className="p-6 sm:px-20 sm:py-14 flex items-center justify-center flex-col gap-[4px] rounded-xl dark:bg-gray-700 bg-white shadow-md my-12">
+                        className="p-6 sm:px-20 sm:py-14 flex items-center justify-center flex-col gap-[4px] rounded-xl dark:bg-color-dark-lite bg-white shadow-md my-12">
                         <img src="https://i.ibb.co/cgfgxGH/Illustrations.png" alt="empty/image" className="w-full sm:w-[200px]" />
 
                         <h1 className="text-[3rem] mt-6 font-[500] text-center">No Service Request Available</h1>
@@ -71,7 +71,7 @@ const ServiceToDo = () => {
                                 <div className='inline-block min-w-full py-2 align-middle md:px-6 lg:px-8'>
                                     <div className='overflow-hidden border border-gray-200 dark:border-gray-600  md:rounded-lg mb-12'>
                                         <table className='min-w-full divide-y divide-gray-200 shadow-md'>
-                                            <thead className='bg-gray-50 dark:bg-gray-700'>
+                                            <thead className='bg-gray-50 dark:bg-color-dark-lite'>
                                                 <tr>
                                                     <th
                                                         scope='col'
@@ -126,7 +126,7 @@ const ServiceToDo = () => {
                                                     </th>
                                                 </tr>
                                             </thead>
-                                            <tbody className='bg-white dark:bg-gray-700 divide-y divide-gray-200 dark:divide-gray-600'>
+                                            <tbody className='bg-white dark:bg-color-dark-lite divide-y divide-gray-200 dark:divide-gray-600'>
                                                 {
                                                     serviceToDo.map(service => <tr key={service?._id}>
                                                         <td className='px-4 py-4 text-sm  whitespace-nowrap capitalize'>
@@ -149,7 +149,7 @@ const ServiceToDo = () => {
                                                         <td className='px-4 py-4 text-sm capitalize  whitespace-nowrap'>
                                                             {service?.serviceTakingDate}
                                                         </td>
-                                                        <td className='px-4 py-4 text-sm font-medium text-gray-700 whitespace-nowrap'>
+                                                        <td className='px-4 py-4 text-sm font-medium text-color-dark-lite whitespace-nowrap'>
                                                             <div className={`inline-flex items-center px-3 py-1 rounded-full gap-x-2 ${service?.serviceStatus === 'Completed' && 'bg-green-100 text-green-500'} ${service?.serviceStatus === 'pending' && 'bg-amber-100 text-amber-500'} ${service?.serviceStatus === 'Working' && 'bg-blue-100 text-blue-500'}`}>
                                                                 <span className={`h-1.5 w-1.5 rounded-full ${service?.serviceStatus === 'Completed' && 'bg-green-500'} ${service?.serviceStatus === 'pending' && 'bg-yellow-500'} ${service?.serviceStatus === 'Working' && 'bg-blue-500'}`}></span>
                                                                 <h2 className='text-sm font-medium capitalize'>{service?.serviceStatus}</h2>

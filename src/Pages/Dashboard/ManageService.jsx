@@ -81,7 +81,7 @@ const ManageService = () => {
             {
                 myService.length === 0 ? (
                     <div
-                        className="p-6 sm:px-20 sm:py-14 flex items-center justify-center flex-col gap-[4px] rounded-xl dark:bg-gray-700 bg-white shadow-md my-12">
+                        className="p-6 sm:px-20 sm:py-14 flex items-center justify-center flex-col gap-[4px] rounded-xl dark:bg-color-dark-lite bg-white shadow-md my-12">
                         <img src="https://i.ibb.co/cgfgxGH/Illustrations.png" alt="empty/image" className="w-full sm:w-[200px]" />
 
                         <h1 className="text-[3rem] mt-6 font-[500] text-center">Your No Service Available</h1>
@@ -103,7 +103,7 @@ const ManageService = () => {
                                 <div className='inline-block min-w-full py-2 align-middle md:px-6 lg:px-8'>
                                     <div className='overflow-hidden border border-gray-200 dark:border-gray-600  md:rounded-lg'>
                                         <table className='min-w-full divide-y divide-gray-200 shadow-md'>
-                                            <thead className='bg-gray-50 dark:bg-gray-700'>
+                                            <thead className='bg-gray-50 dark:bg-color-dark-lite'>
                                                 <tr>
                                                     <th
                                                         scope='col'
@@ -149,7 +149,7 @@ const ManageService = () => {
                                                     </th>
                                                 </tr>
                                             </thead>
-                                            <tbody className='bg-white dark:bg-gray-700 divide-y divide-gray-200 dark:divide-gray-600'>
+                                            <tbody className='bg-white dark:bg-color-dark-lite divide-y divide-gray-200 dark:divide-gray-600'>
                                                 {
                                                     myService.map(service => <tr key={service?._id}>
                                                         <td className='px-4 py-4 text-sm   whitespace-nowrap'>

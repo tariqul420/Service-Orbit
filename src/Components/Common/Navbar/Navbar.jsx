@@ -38,7 +38,7 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`w-full py-6 sticky top-0 z-[1000] bg-white dark:bg-gray-800 transition-transform duration-300 ${showNavbar ? "translate-y-0" : "-translate-y-full"}`}
+            className={`w-full py-6 sticky top-0 z-[1000] bg-white dark:bg-[#121b27] transition-transform duration-300 ${showNavbar ? "translate-y-0" : "-translate-y-full"}`}
         >
             <div className="w-11/12 mx-auto flex items-center justify-between">
                 <div>
@@ -81,7 +81,7 @@ const Navbar = () => {
                                             className={`${dashboardOpen
                                                 ? "translate-y-0 opacity-100 z-[1000]"
                                                 : "translate-y-[10px] opacity-0 z-[-1] hidden"
-                                                } bg-white w-max rounded-md shadow-md absolute top-[45px] right-0 p-[10px] flex flex-col transition-all duration-300 gap-[5px] dark:bg-gray-700`}
+                                                } bg-white w-max rounded-md shadow-md absolute top-[45px] right-0 p-[10px] flex flex-col transition-all duration-300 gap-[5px] dark:bg-color-dark-lite`}
                                         >
                                             <NavLink to="/add-service" className="navBarLink">
                                                 <p className="flex items-center gap-[5px] rounded-md p-[8px] pr-[45px] py-[3px] text-[1rem] hover:bg-gray-50 dark:hover:bg-gray-600/30">
@@ -133,7 +133,7 @@ const Navbar = () => {
                     className={`${mobileSidebarOpen
                         ? "translate-y-0 opacity-100 z-[2000]"
                         : "translate-y-[-200px] opacity-0 z-[-1]"
-                        } lg:hidden bg-gray-200 dark:bg-gray-700 boxShadow p-4 text-center absolute top-[65px] right-0 w-full md:w-4/12 rounded-md transition-all duration-300`}
+                        } lg:hidden bg-gray-200 dark:bg-color-dark-lite boxShadow p-4 text-center absolute top-[65px] right-0 w-full md:w-4/12 rounded-md transition-all duration-300`}
                 >
                     <ul className="flex flex-col justify-center items-center gap-[20px] text-[1rem] lg:flex">
                         <li className="navBarLink">
@@ -159,7 +159,7 @@ const Navbar = () => {
                                         className={`${dashboardOpen
                                             ? "translate-y-0 opacity-100 z-[1000]"
                                             : "translate-y-[10px] opacity-0 z-[-1]"
-                                            } bg-white w-max rounded-md shadow-md absolute top-[45px] right-0 p-[10px] flex flex-col transition-all duration-300 gap-[5px] dark:bg-gray-700`}
+                                            } bg-white w-max rounded-md shadow-md absolute top-[45px] right-0 p-[10px] flex flex-col transition-all duration-300 gap-[5px] dark:bg-color-dark-lite`}
                                     >
                                         <NavLink to="/add-service" className="navBarLink">
                                             <p className="flex items-center gap-[5px] rounded-md p-[8px] pr-[45px] py-[3px] text-[1rem] hover:bg-gray-50 dark:hover:bg-gray-600/30">
