@@ -1,6 +1,6 @@
 /* Font Family */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import "keep-react/css";
+@import 'keep-react/css';
 
 @tailwind base;
 @tailwind components;
@@ -95,7 +95,7 @@ nav a.active:hover {
 }
 
 .dark .pagination .active {
-  background-color: #ff9800;
+  background-color: #f15a28;
 }
 
 .pagination .active {
@@ -104,15 +104,15 @@ nav a.active:hover {
 }
 
 .dark nav a.active {
-  color: #ff9800;
+  color: #f15a28;
 }
 
 .dark nav a.active::before {
-  background-color: #ff9800;
+  background-color: #f15a28;
 }
 
 .dark nav a:hover {
-  color: #ff9800;
+  color: #f15a28;
 }
 
 .dark .slick-dots li.slick-active button::before {

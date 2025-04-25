@@ -1,17 +1,14 @@
 import daisyui from 'daisyui';
-import { keepTheme } from "keep-react/keepTheme";
+import { keepTheme } from 'keep-react/keepTheme';
 
 /** @type {import('tailwindcss').Config} */
 const config = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
         'color-primary-d': '#09101a',
-        'color-accent-d': '#FF9800',
+        'color-accent-d': '#F15A28',
         'color-text-d': '#F4F4F9',
         'color-dark-lite': '#121b27',
 
@@ -20,12 +17,12 @@ const config = {
         'color-text': '#212121',
       },
       fontFamily: {
-        "Montserrat": ["Montserrat", "serif"],
-      }
+        Montserrat: ['Montserrat', 'serif'],
+      },
     },
   },
   darkMode: 'class',
   plugins: [daisyui],
-}
+};
 
 export default keepTheme(config);
