@@ -23,7 +23,7 @@ const ThemeToggle = () => {
 
   return (
     <button onClick={toggleTheme} className="p-2 rounded-full bg-white dark:bg-color-dark-lite">
-      {theme === 'dark' ? <IoMdSunny size={30} color="#f15a28" /> : <MdDarkMode size={30} color="#1E1E1E" />}
+      {theme === 'dark' ? <IoMdSunny size={30} color="#7C33F5" /> : <MdDarkMode size={30} color="#1E1E1E" />}
     </button>
   );
 };
