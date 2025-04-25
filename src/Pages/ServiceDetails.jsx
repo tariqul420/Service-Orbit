@@ -1,12 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
+import { FaLocationCrosshairs, FaSackDollar } from "react-icons/fa6";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import LoadingSpinner from "../Components/Common/LoadingSpinner";
-import { FaLocationCrosshairs, FaSackDollar } from "react-icons/fa6";
 import BookModal from "../Components/ServiceDetails/BookModal";
 import useAuth from "../Hook/useAuth";
-import toast from "react-hot-toast";
 
 const ServiceDetails = () => {
     const { id } = useParams();
