@@ -1,36 +1,36 @@
-import useAuth from "../Hook/useAuth";
-import PropTypes from "prop-types";
-import { useLocation, useNavigate } from "react-router-dom";
-import LoadingSpinner from "../Components/Common/LoadingSpinner";
+import PropTypes from 'prop-types';
+import { useLocation, useNavigate } from 'react-router-dom';
+import LoadingSpinner from '../Components/Common/LoadingSpinner';
+import useAuth from '../Hook/useAuth';
 
 const PrivateRouter = ({ children }) => {
-    const { user, loading } = useAuth()
-    const location = useLocation()
-    const navigate = useNavigate()
+  const { user, loading } = useAuth();
+  const location = useLocation();
+  const navigate = useNavigate();
 
-    if (loading) {
-        return (
-            <div className="min-w-screen flex items-center justify-center my-12">
-                {/* <ScaleLoader
+  if (loading) {
+    return (
+      <div className="min-w-screen flex items-center justify-center my-12">
+        {/* <ScaleLoader
                     height={60}
                     margin={2}
                     width={5}
-                    color="#3B82F6"
+                    color="#7C32F4"
                 /> */}
-                <LoadingSpinner />
-            </div>
-        )
-    }
+        <LoadingSpinner />
+      </div>
+    );
+  }
 
-    if (user) {
-        return children
-    }
+  if (user) {
+    return children;
+  }
 
-    return navigate('/login', { state: { from: location.pathname } });
+  return navigate('/login', { state: { from: location.pathname } });
 };
 
 PrivateRouter.propTypes = {
-    children: PropTypes.object.isRequired
-}
+  children: PropTypes.object.isRequired,
+};
 
 export default PrivateRouter;
